@@ -10,8 +10,8 @@ $color-seven: #7e7e7e;
 /* ------------------------ */
 
 /* Variable delay anime */
-$supp-delay: 1000ms;
-$e_tit-delay: 1000ms;
+$supp-delay: 50ms;
+$e_tit-delay: 250ms;
 $e_1-delay: $e_tit-delay + $supp-delay;
 $e_2-delay: $e_1-delay + $supp-delay;
 $e_3-delay: $e_2-delay + $supp-delay;
@@ -185,12 +185,12 @@ section{
         display: none;
     }
     
-    input:checked ~ .price {
+    /* input:checked ~ .price {
         
     }
       input:not(:checked) ~ .price{
         
-    }
+    } */
     /* ---------------------------------- */    
     article{
         box-shadow: 1px 1px 10px rgb(200, 200, 200);
@@ -202,7 +202,7 @@ section{
         justify-content: space-between;
         margin: 25px auto;
         & > .price{
-            transition: all .4s linear;
+            transition: all 333ms linear;
         }
         &:hover > .price{
             transform: translate(-200%, 0);
@@ -217,7 +217,7 @@ section{
             .azerty{
                 margin-bottom: -10px;
                 font-weight: bold;
-                font-size: 17px;
+                font-size: 15px;
                 
             }
             .qwerty{
@@ -225,13 +225,33 @@ section{
             }
         }
         .price{
-            margin: 40px 25px 0px 0px;
+            margin: {
+                top: 13%;
+                bottom: 0px;
+                left: 0px;
+                right: 25px;
+            };
             color: $color-four;
             font-weight: bold;
             font-size: 14px;
             
         }
     }
+    /* #plats_1_delice{
+        .price{
+            margin: {
+                top: 18%;
+                bottom: 0px;
+                left: 0px;
+                right: 25px;
+
+            };
+            color: red;
+            font-weight: bold;
+            font-size: 14px;
+            
+        }
+    } */
     /* anime apparition */
     #e_title{
         animation: title 1000ms $e_tit-delay both ease-in-out;

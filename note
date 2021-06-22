@@ -36,7 +36,13 @@ box-shadow: -1px 0px 10px red;
 
 
 
+margin: {
+                top: 40px;
+                bottom: 0px;
+                left: 0px;
+                right: 25px;
 
+            };
 
 
 
