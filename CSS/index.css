@@ -1,0 +1,408 @@
+/*Colors*/
+/*Font*/
+@font-face {
+  /*Shrikhand*/
+  font-family: 'Shrikhand';
+  src: url(/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /*Roboto - Regular*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /*Roboto - Italic*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  /*Roboto - Bold*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  /*Roboto - Black*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  /*Roboto - Italic/Bold*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Roboto', serif;
+}
+
+/*Header*/
+.logo_h {
+  background-image: url("/images/logo/ohmyfood.png");
+  border: 1px none;
+  height: 65px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: -8px;
+  margin-right: -10px;
+  padding-left: 8px;
+}
+
+.local {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px none;
+  background-color: #eaeaea;
+  margin-left: -25px;
+  margin-right: -10px;
+  padding-left: 8px;
+}
+
+.local .fas {
+  font-size: 1em;
+  position: relative;
+  top: 15px;
+  right: 25px;
+}
+
+.local p {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.prez {
+  height: 287px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #f6f6f6;
+}
+
+.prez h1, .prez p, .prez div {
+  text-align: center;
+}
+
+.prez h1 {
+  margin: -5% 15% 0%;
+  font-size: 25px;
+  font-weight: black;
+}
+
+.prez p {
+  margin: 5% 10% -40px;
+  font-size: 15px;
+}
+
+.prez div {
+  margin-top: 25%;
+}
+
+.prez div a {
+  border: 1px none black;
+  border-radius: 30px;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-box-shadow: 1px 1px 10px #c8c8c8;
+          box-shadow: 1px 1px 10px #c8c8c8;
+}
+
+.prez div a:hover {
+  -webkit-box-shadow: 1px 1px 10px #505050;
+          box-shadow: 1px 1px 10px #505050;
+}
+
+.fct {
+  margin-bottom: 5%;
+}
+
+.fct h2 {
+  padding-left: 5%;
+}
+
+.fct div {
+  border: 1px none black;
+  border-radius: 18px;
+  margin: 5% 0px 0px 5%;
+  padding-bottom: 1px;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 1px 1px 10px #e6e3e3;
+          box-shadow: 1px 1px 10px #e6e3e3;
+}
+
+.fct div .fas {
+  position: relative;
+  right: 30px;
+  top: 20px;
+}
+
+.fct div .fa-mobile-alt {
+  right: 22px;
+}
+
+.fct div .fa-store {
+  right: 28px;
+}
+
+.fct div .fct_txt {
+  font-weight: bold;
+  position: relative;
+  right: 10%;
+}
+
+.fct div #Snd_txt {
+  right: 14%;
+}
+
+.fct div #Trd_txt {
+  right: 13%;
+}
+
+.fct div .nb {
+  border: 2px solid #9356DC;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #9356DC;
+  color: white;
+  position: relative;
+  right: 10%;
+}
+
+.fct .Fst .fas, .fct .Snd .fas {
+  color: #7e7e7e;
+}
+
+.fct .Trd {
+  background-color: #F5EDFF;
+}
+
+.fct .Trd .fa-store {
+  color: #9356DC;
+}
+
+/*Section*/
+.middle {
+  background-color: #f6f6f6;
+  margin: 0px -10px 0px -10px;
+  padding: 5px 10px 10px 10px;
+}
+
+.middle h2 {
+  padding-left: 5%;
+}
+
+.middle div a {
+  text-decoration: none;
+}
+
+.resto_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 1px none black;
+  border-radius: 10px;
+  width: 89.32%;
+  height: 250px;
+  margin-left: 5.34%;
+  margin-right: 5.34%;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 1px 1px 10px #c8c8c8;
+          box-shadow: 1px 1px 10px #c8c8c8;
+}
+
+.resto_card:hover {
+  -webkit-box-shadow: 1px 1px 10px #505050;
+          box-shadow: 1px 1px 10px #505050;
+}
+
+.resto_card img {
+  border-radius: 10px 10px 0px 0px;
+  height: 175px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  top: -1px;
+}
+
+.resto_card_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.resto_card_info div h1 {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+.resto_card_info div p {
+  margin-top: -15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.resto_card_info input[type=checkbox] {
+  display: none;
+}
+
+.resto_card_info .far {
+  padding-bottom: 15px;
+  padding-left: 1px;
+  padding-right: 1px;
+  cursor: pointer;
+}
+
+.resto_card_info #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon, .resto_card_info #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon, .resto_card_info #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon, .resto_card_info #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon {
+  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.resto_card_info i {
+  position: relative;
+  top: 22px;
+  right: 15px;
+  color: black;
+  font-weight: normal;
+  font-size: 30px;
+  height: 16px;
+}
+
+/*Footer*/
+footer {
+  background-color: #353535;
+  color: white;
+  margin: 0px -10px -20px -10px;
+  padding: 5px 0px 5px 10px;
+}
+
+footer .logo_f {
+  background-image: url("/images/logo/ohmyfood.png");
+}
+
+footer div p {
+  font-size: 12px;
+  color: white;
+}
+
+footer div a {
+  text-decoration: none;
+}
+
+footer div a:hover {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+
+footer .f_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .f_txt .partner, footer .f_txt .legal, footer .f_txt .contact {
+  margin: -15px 0px 0px 0px;
+}
+
+footer .resto, footer .partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .resto .fas, footer .partner .fas {
+  font-size: 12px;
+  position: relative;
+  top: 15px;
+}
+
+footer .resto p, footer .partner p {
+  position: relative;
+  left: 10px;
+}
+/*# sourceMappingURL=index.css.map */

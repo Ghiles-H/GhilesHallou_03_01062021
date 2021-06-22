@@ -1,0 +1,333 @@
+/*Colors*/
+$color-first:#9356DC;
+$color-first-alt:#F5EDFF;
+$color-second: #FF79DA;
+$color-third:#99E2D0;
+$color-four: #353535;
+$color-five: #eaeaea;
+$color-six: #f6f6f6;
+$color-seven: #7e7e7e;
+
+/*Font*/
+@font-face{         /*Shrikhand*/
+    font-family: 'Shrikhand';
+    src: url(/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{         /*Roboto - Regular*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{         /*Roboto - Italic*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face{         /*Roboto - Bold*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{         /*Roboto - Black*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{         /*Roboto - Italic/Bold*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+body{
+    font-family: 'Roboto', serif;
+    
+}
+/*Header*/
+.logo_h{
+    background-image: url("/images/logo/ohmyfood.png");
+    border: 1px none;
+    height: 65px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: -8px;
+    margin-right: -10px;
+    padding-left: 8px;
+    
+    
+}
+
+.local{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px none;
+    background-color: $color-five;
+    margin-left: -25px;
+    margin-right: -10px;
+    padding-left: 8px;
+    
+    .fas{
+        font-size: 1em;
+        position: relative;
+        top: 15px;
+        right: 25px;
+    }
+    p{
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+}
+.prez{
+    height: 287px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: $color-six;
+    h1, p, div{
+        text-align: center;
+    }
+    h1{
+        margin: -5% 15% 0%;
+        font-size: 25px;
+        font-weight: black;
+    }
+    p{
+        
+        margin: 5% 10% -40px;
+        font-size: 15px;
+    }
+    div{
+        margin-top: 25%;
+    }
+    div a{
+        border: 1px none black;
+        border-radius: 30px;
+        padding: 15px;
+        text-decoration: none;
+        color: white;
+        background: linear-gradient(to bottom right, $color-second, $color-first);
+        box-shadow: 1px 1px 10px rgb(200, 200, 200);
+        &:hover{
+            box-shadow: 1px 1px 10px rgb(80, 80, 80);
+        }
+    }
+}
+
+.fct{
+    margin-bottom: 5%;
+    h2{
+        padding-left: 5%;
+    }
+    
+    div{
+        border: 1px none black;
+        border-radius: 18px;
+        margin: 5% 0px 0px 5%;
+        padding-bottom: 1px;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: $color-six;
+        box-shadow: 1px 1px 10px rgb(230, 227, 227);
+        .fas{
+            position: relative;
+            right: 30px;
+            top: 20px;
+        }
+        .fa-mobile-alt{
+            right: 22px;
+        }
+        .fa-store{
+            right: 28px;
+        }
+        .fct_txt{
+            font-weight: bold;
+            position: relative;
+            right: 10%;
+        }
+        #Snd_txt{
+            right: 14%;
+        }
+        #Trd_txt{
+            right: 13%;
+        }
+        .nb{
+            border: 2px solid $color-first;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            background-color: $color-first;
+            color: white;
+            position: relative;
+            right: 10%;
+        }
+    }
+    
+    .Fst .fas, .Snd .fas{
+        color: $color-seven;
+    }
+    .Trd{
+        background-color: $color-first-alt;
+        .fa-store{
+            color: $color-first;
+        }
+    }
+    
+}
+
+/*Section*/
+.middle{
+    background-color: $color-six;
+    margin: 0px -10px 0px -10px;
+    padding: 5px 10px 10px 10px;
+    h2{
+        padding-left: 5%;
+    }
+    div a {
+        text-decoration: none;
+        
+    }
+}
+.resto_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px none black;
+    border-radius: 10px;
+    width: 89.32%;
+    height: 250px;
+    margin-left: 5.34%;
+    margin-right: 5.34%;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 10px rgb(200, 200, 200);
+    &:hover{
+        box-shadow: 1px 1px 10px rgb(80, 80, 80);
+    }
+
+    img{
+        border-radius: 10px 10px 0px 0px;
+        height: 175px;
+        width: 100%;
+        object-fit:cover;
+        position: relative;
+        top: -1px;
+    }
+}
+
+.resto_card_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    div h1{
+        font-size: 18px;
+        color: black;
+        text-decoration: none;
+        
+    }
+
+    div p{
+        margin-top: -15px;
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    input[type=checkbox]{
+        display: none;
+    }
+    .far{
+        padding-bottom: 15px;
+        padding-left: 1px;
+        padding-right: 1px;
+        cursor: pointer;
+    }
+    #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon, #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon, #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon, #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon{
+        background: linear-gradient(to top right, $color-second, $color-first);
+        color: rgba(0, 0, 0, 0);
+        font-weight: bold;
+        -webkit-text-fill-color: transparent;
+        background-clip:text;
+        -webkit-background-clip:text;
+    }
+
+    i{
+        position: relative;
+        top: 22px;
+        right: 15px;
+        color: black;
+        font-weight: normal;
+        font-size: 30px;
+        height: 16px;
+    }
+    
+}
+
+    
+
+
+
+/*Footer*/
+
+footer{
+    background-color: $color-four;
+    color: white;
+    margin: 0px -10px -20px -10px;
+    padding: 5px 0px 5px 10px;
+    .logo_f{
+        background-image: url("/images/logo/ohmyfood.png");
+    }
+    div p{
+        font-size: 12px;
+        color: white;
+        
+    }
+    div a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline white;
+        }
+    }
+
+    .f_txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .partner, .legal, .contact{
+            margin: -15px 0px 0px 0px;
+        }
+    }
+    .resto, .partner{
+        display: flex;
+        flex-direction: row;
+        .fas{
+            font-size: 12px;
+            position: relative;
+            top: 15px;
+        }
+        p{
+            position: relative;
+            left: 10px;
+        }
+    }
+}

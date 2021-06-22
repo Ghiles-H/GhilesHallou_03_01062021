@@ -1,0 +1,243 @@
+/*Colors*/
+$color-first:#9356DC;
+$color-first-alt:#F5EDFF;
+$color-second: #FF79DA;
+$color-third:#99E2D0;
+$color-four: #353535;
+$color-five: #eaeaea;
+$color-six: #f6f6f6;
+$color-seven: #7e7e7e;
+
+/*Font*/
+@font-face{         /*Shrikhand*/
+    font-family: 'Shrikhand';
+    src: url(/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{         /*Roboto - Regular*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{         /*Roboto - Italic*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face{         /*Roboto - Bold*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{         /*Roboto - Black*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{         /*Roboto - Italic/Bold*/
+    font-family: 'Roboto';
+    src: url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+body{
+    font-family: 'Roboto', serif;
+}
+header{
+    .bloc{
+        margin-top: -35px;
+        a{
+            font-size: 25px;
+            position: relative;
+            top: 50px;
+            left: 15px;
+            color: black;
+        }
+        .logo_h{
+            background-image: url("/images/logo/ohmyfood.png");
+            border: 1px none;
+            height: 65px;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-left: -8px;
+            margin-right: -10px;
+            padding-left: 8px;
+            padding-bottom: 10px;
+        }
+    }
+    .back_img{
+        width: 100%;
+        height: 300px;
+        margin: -10px;
+        padding: 10px;
+        position: relative;
+        z-index: 0;
+        background-image: url("/images/restaurants/delice.jpg");
+        background-size: cover;
+        
+        
+
+    }
+}
+h1{
+    color: black;
+    font-family: 'Shrikhand', serif;
+    font-size: 25px;
+    padding-left: 20px;
+    
+}
+
+input[type=checkbox]{
+    display: none;
+}
+.far{
+    padding-bottom: 15px;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+#heart:checked ~ .btn-heart #heart-btn #heart-icon{
+    background: linear-gradient(to top right, $color-second, $color-first);
+    color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+    -webkit-background-clip:text;
+}
+
+.middle{
+    background-color: $color-six;
+    margin: -10px;
+    padding: 10px;
+    border: 1px none black;
+    border-radius: 50px 50px 0px 0px;
+    position: relative;
+    top: -25px;
+    z-index: 1;
+    
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .btn_fav{
+        position: relative;
+        top: 25%;
+        right: 175%;
+        font-size: 25px;
+    }
+}
+section{
+    h2{
+        font-size: 15px;
+        font-weight: normal;
+        padding-left: 20px;
+    }
+    a{
+        text-decoration: none;
+        
+        article{
+            box-shadow: 1px 1px 10px rgb(200, 200, 200);
+            background-color: white;
+            border: 1px none black;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 25px auto;
+            &:hover > div, &:hover > .price{
+                color: red;
+            }
+            
+            div{
+                margin-left: 10px;
+                color: black;
+                
+                .azerty{
+                    margin-bottom: -10px;
+                    font-weight: bold;
+                    font-size: 17px;
+                    
+                }
+                .qwerty{
+                    font-size: 14px;
+                }
+            }
+            .price{
+                margin: 40px 25px 0px 0px;
+                color: $color-four;
+                font-weight: bold;
+                font-size: 14px;
+                
+            }
+        }
+    }
+    
+}
+
+
+.button{
+    margin: 75px 25%;
+    
+    .btn{
+        border: 1px none black;
+        border-radius: 30px;
+        
+        padding: 20px 50px;
+        text-decoration: none;
+        color: white;
+        background: linear-gradient(to bottom right, $color-second, $color-first);
+        box-shadow: 1px 1px 10px rgb(200, 200, 200);
+        &:hover{
+            box-shadow: 1px 1px 10px rgb(80, 80, 80);
+        }
+    }
+}
+
+footer{
+    background-color: $color-four;
+    color: white;
+    margin: 0px -10px -20px -10px;
+    padding: 5px 0px 5px 10px;
+    .logo_f{
+        background-image: url("/images/logo/ohmyfood.png");
+    }
+    div p{
+        font-size: 12px;
+        color: white;
+        
+    }
+    div a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline white;
+        }
+    }
+
+    .f_txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .partner, .legal, .contact{
+            margin: -15px 0px 0px 0px;
+        }
+    }
+    .resto, .partner{
+        display: flex;
+        flex-direction: row;
+        .fas{
+            font-size: 12px;
+            position: relative;
+            top: 15px;
+        }
+        p{
+            position: relative;
+            left: 10px;
+        }
+    }
+}

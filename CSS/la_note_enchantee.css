@@ -1,0 +1,466 @@
+/*Colors*/
+/* --------------------- */
+/* Variable delay anime */
+/* ----------------------------- */
+/*Font*/
+@font-face {
+  /*Shrikhand*/
+  font-family: 'Shrikhand';
+  src: url(/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /*Roboto - Regular*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  /*Roboto - Italic*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  /*Roboto - Bold*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  /*Roboto - Black*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  /*Roboto - Italic/Bold*/
+  font-family: 'Roboto';
+  src: url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Roboto', serif;
+}
+
+header .bloc {
+  margin-top: -35px;
+}
+
+header .bloc a {
+  font-size: 25px;
+  position: relative;
+  top: 50px;
+  left: 15px;
+  color: black;
+}
+
+header .bloc .logo_h {
+  background-image: url("/images/logo/ohmyfood.png");
+  border: 1px none;
+  height: 65px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: -8px;
+  margin-right: -10px;
+  padding-left: 8px;
+  padding-bottom: 10px;
+}
+
+header .back_img {
+  width: 100%;
+  height: 300px;
+  margin: -10px;
+  padding: 10px;
+  position: relative;
+  z-index: 0;
+  background-image: url("/images/restaurants/enchantee.jpg");
+  background-size: cover;
+}
+
+h1 {
+  color: black;
+  font-family: 'Shrikhand', serif;
+  font-size: 25px;
+  padding-left: 20px;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.far {
+  padding-bottom: 15px;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+#heart:checked ~ .btn-heart #heart-btn #heart-icon {
+  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.middle {
+  background-color: #f6f6f6;
+  margin: -10px;
+  padding: 10px;
+  border: 1px none black;
+  border-radius: 50px 50px 0px 0px;
+  position: relative;
+  top: -25px;
+  z-index: 1;
+}
+
+.head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.head .btn_fav {
+  position: relative;
+  top: 25%;
+  right: 175%;
+  font-size: 25px;
+}
+
+section {
+  /* Btn radio choix des plats */
+  /* ---------------------------------- */
+  /* anime apparition */
+  /* ------------------------------------------------------ */
+}
+
+section h2 {
+  font-size: 15px;
+  font-weight: normal;
+  padding-left: 20px;
+}
+
+section .btn-choice {
+  display: block;
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  height: 72px;
+  width: 90%;
+  z-index: 5;
+  opacity: 0;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+section input[type=radio] {
+  display: none;
+}
+
+section input:checked ~ .price {
+  -webkit-animation: price_in 1000ms 0ms both ease-in-out;
+          animation: price_in 1000ms 0ms both ease-in-out;
+}
+
+section input:not(:checked) ~ .price {
+  -webkit-animation: price_out 1000ms 0ms both ease-in-out;
+          animation: price_out 1000ms 0ms both ease-in-out;
+}
+
+section article {
+  -webkit-box-shadow: 1px 1px 10px #c8c8c8;
+          box-shadow: 1px 1px 10px #c8c8c8;
+  background-color: white;
+  border: 1px none black;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 25px auto;
+}
+
+section article:hover {
+  -webkit-box-shadow: 1px 1px 10px #505050;
+          box-shadow: 1px 1px 10px #505050;
+}
+
+section article div {
+  margin-left: 10px;
+  color: black;
+}
+
+section article div .azerty {
+  margin-bottom: -10px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+section article div .qwerty {
+  font-size: 14px;
+}
+
+section article .price {
+  margin: 40px 25px 0px 0px;
+  color: #353535;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+section #e_title {
+  -webkit-animation: title 1000ms 500ms both ease-in-out;
+          animation: title 1000ms 500ms both ease-in-out;
+}
+
+section #p_title {
+  -webkit-animation: title 1000ms 2165ms both ease-in-out;
+          animation: title 1000ms 2165ms both ease-in-out;
+}
+
+section #d_title {
+  -webkit-animation: title 1000ms 3497ms both ease-in-out;
+          animation: title 1000ms 3497ms both ease-in-out;
+}
+
+section #entree_1 {
+  -webkit-animation: art 1000ms 833ms both ease-in-out;
+          animation: art 1000ms 833ms both ease-in-out;
+}
+
+section #entree_2 {
+  -webkit-animation: art 1000ms 1166ms both ease-in-out;
+          animation: art 1000ms 1166ms both ease-in-out;
+}
+
+section #entree_3 {
+  -webkit-animation: art 1000ms 1499ms both ease-in-out;
+          animation: art 1000ms 1499ms both ease-in-out;
+}
+
+section #entree_4 {
+  -webkit-animation: art 1000ms 1832ms both ease-in-out;
+          animation: art 1000ms 1832ms both ease-in-out;
+}
+
+section #plats_1 {
+  -webkit-animation: art 1000ms 2498ms both ease-in-out;
+          animation: art 1000ms 2498ms both ease-in-out;
+}
+
+section #plats_2 {
+  -webkit-animation: art 1000ms 2831ms both ease-in-out;
+          animation: art 1000ms 2831ms both ease-in-out;
+}
+
+section #plats_3 {
+  -webkit-animation: art 1000ms 3164ms both ease-in-out;
+          animation: art 1000ms 3164ms both ease-in-out;
+}
+
+section #desserts_1 {
+  -webkit-animation: art 1000ms 3830ms both ease-in-out;
+          animation: art 1000ms 3830ms both ease-in-out;
+}
+
+section #desserts_2 {
+  -webkit-animation: art 1000ms 4163ms both ease-in-out;
+          animation: art 1000ms 4163ms both ease-in-out;
+}
+
+section #desserts_3 {
+  -webkit-animation: art 1000ms 4496ms both ease-in-out;
+          animation: art 1000ms 4496ms both ease-in-out;
+}
+
+.button {
+  margin: 75px 25%;
+}
+
+.button .btn {
+  border: 1px none black;
+  border-radius: 30px;
+  padding: 20px 50px;
+  text-decoration: none;
+  color: white;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-box-shadow: 1px 1px 10px #c8c8c8;
+          box-shadow: 1px 1px 10px #c8c8c8;
+}
+
+.button .btn:hover {
+  -webkit-box-shadow: 1px 1px 10px #505050;
+          box-shadow: 1px 1px 10px #505050;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  margin: 0px -10px -20px -10px;
+  padding: 5px 0px 5px 10px;
+}
+
+footer .logo_f {
+  background-image: url("/images/logo/ohmyfood.png");
+}
+
+footer div p {
+  font-size: 12px;
+  color: white;
+}
+
+footer div a {
+  text-decoration: none;
+}
+
+footer div a:hover {
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+}
+
+footer .f_txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .f_txt .partner, footer .f_txt .legal, footer .f_txt .contact {
+  margin: -15px 0px 0px 0px;
+}
+
+footer .resto, footer .partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .resto .fas, footer .partner .fas {
+  font-size: 12px;
+  position: relative;
+  top: 15px;
+}
+
+footer .resto p, footer .partner p {
+  position: relative;
+  left: 10px;
+}
+
+/* Keyframes */
+@-webkit-keyframes price_in {
+  0% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-200%, 0);
+            transform: translate(-200%, 0);
+  }
+}
+@keyframes price_in {
+  0% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-200%, 0);
+            transform: translate(-200%, 0);
+  }
+}
+
+@-webkit-keyframes price_out {
+  0% {
+    -webkit-transform: translate(-200%, 0);
+            transform: translate(-200%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+}
+
+@keyframes price_out {
+  0% {
+    -webkit-transform: translate(-200%, 0);
+            transform: translate(-200%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+}
+
+@-webkit-keyframes title {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes art {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes art {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=la_note_enchantee.css.map */
