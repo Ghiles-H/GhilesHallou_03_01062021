@@ -194,6 +194,8 @@ input[type=checkbox] {
 }
 
 section {
+  position: relative;
+  /* Tiret Vert sous le titre */
   /* Btn radio choix des plats */
   /* input:checked ~ .price {
         transform: translate(-200%, 0)
@@ -216,6 +218,16 @@ section h2 {
   font-size: 15px;
   font-weight: normal;
   padding-left: 20px;
+}
+
+section .tiret_vert {
+  border: 1px black none;
+  height: 5px;
+  width: 40px;
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  background-color: #99E2D0;
 }
 
 section .btn-choice {
@@ -296,7 +308,7 @@ section article:hover > .price {
 }
 
 section article:hover .azerty, section article:hover .qwerty {
-  width: 250px;
+  width: 200px;
 }
 
 section article .progress {
@@ -352,7 +364,7 @@ section article .price {
   left: 85%;
 }
 
-section #e_title {
+section #e_title, section #e_tiret {
   -webkit-animation: title 1000ms 250ms both ease-in-out;
           animation: title 1000ms 250ms both ease-in-out;
 }
@@ -377,7 +389,7 @@ section .entree_4 {
           animation: art 1000ms 850ms both ease-in-out;
 }
 
-section #p_title {
+section #p_title, section #p_tiret {
   -webkit-animation: title 1000ms 850ms both ease-in-out;
           animation: title 1000ms 850ms both ease-in-out;
 }
@@ -402,7 +414,7 @@ section .plats_3 {
           animation: art 1000ms 1300ms both ease-in-out;
 }
 
-section #d_title {
+section #d_title, section #d_tiret {
   -webkit-animation: title 1000ms 1450ms both ease-in-out;
           animation: title 1000ms 1450ms both ease-in-out;
 }

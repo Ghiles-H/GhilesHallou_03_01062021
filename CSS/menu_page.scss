@@ -191,11 +191,23 @@ input[type=checkbox]{
     
 }
 section{
+    position: relative;
     h2{
         font-size: 15px;
         font-weight: normal;
         padding-left: 20px;
     }
+    /* Tiret Vert sous le titre */
+    .tiret_vert{
+        border: 1px black none;
+        height: 5px;
+        width: 40px;
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        background-color: $color-third;
+    }
+
     /* Btn radio choix des plats */
     .btn-choice{
         display: block;
@@ -271,7 +283,7 @@ section{
                 transform: translate(-200%, 0); 
             }
             .azerty, .qwerty{
-                width: 250px;
+                width: 200px;
             }
             
         }
@@ -332,7 +344,7 @@ section{
         
     /* ----------------------------------------------------------- */
     /* anime apparition */
-    #e_title{
+    #e_title, #e_tiret{
         animation: title 1000ms $e_tit-delay both ease-in-out;
     }
     .entree_1{
@@ -347,7 +359,7 @@ section{
     .entree_4{
         animation: art 1000ms $e_4-delay both ease-in-out;
     }
-    #p_title{
+    #p_title, #p_tiret{
         animation: title 1000ms $p_tit-delay both ease-in-out;
     }
     #p_title_alt{
@@ -363,7 +375,7 @@ section{
     .plats_3{
         animation: art 1000ms $p_3-delay both ease-in-out;
     }
-    #d_title{
+    #d_title, #d_tiret{
         animation: title 1000ms $d_tit-delay both ease-in-out;
     }
     .desserts_1{
