@@ -116,7 +116,7 @@ header{
 h1{
     color: black;
     font-family: 'Shrikhand', serif;
-    font-size: 25px;
+    font-size: 23px;
     padding-left: 20px;
     
 }
@@ -128,14 +128,19 @@ input[type=checkbox]{
     padding-bottom: 15px;
     padding-left: 1px;
     padding-right: 1px;
+    position: relative;
+    left: 25px;
 }
-#heart:checked ~ .btn-heart #heart-btn #heart-icon{
+#heart:checked ~ .btn-heart #heart-btn #heart-icon-BG{
+    opacity: 1;
+}
+#heart:checked ~ .btn-heart #heart-btn #heart-icon-noBG{
+    opacity: 1;
     background: linear-gradient(to top right, $color-second, $color-first);
-    color: rgba(0, 0, 0, 0);
-    font-weight: bold;
     -webkit-text-fill-color: transparent;
     background-clip:text;
     -webkit-background-clip:text;
+    
 }
 
 .middle{
@@ -153,12 +158,37 @@ input[type=checkbox]{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     .btn_fav{
         position: relative;
-        top: 25%;
-        right: 175%;
+        /* top: 25%;
+        right: 175%; */
         font-size: 25px;
+        cursor: pointer;
+        #heart-icon-noBG{
+            position: absolute ;
+            left: -60px;
+            top: 15px;
+            opacity: 1;
+
+        }
+        #heart-icon-BG{
+            
+            position: absolute ;
+            
+            left: -60px;
+            top: 15px;
+            opacity: 0;
+            transition: opacity 600ms linear;
+            background: linear-gradient(to top right, $color-second, $color-first);
+            color: rgba(0, 0, 0, 0);
+            font-weight: bold;
+            -webkit-text-fill-color: transparent;
+            background-clip:text;
+            -webkit-background-clip:text;
+        }
     }
+    
 }
 section{
     h2{
@@ -184,14 +214,27 @@ section{
     input[type=radio]{
         display: none;
     }
-    
-    input:checked ~ .price {
+    input:checked{
+        & ~ .price{
+            transform: translate(-200%, 0); 
+        }
+        & ~ .progress{
+            transform: scaleX(1);
+        }
+        & ~ .text_menu{
+            .azerty, .qwerty{
+                width: 200px;
+            }
+            
+        }
+    }
+    /* input:checked ~ .price {
         transform: translate(-200%, 0)
     }
     input:checked ~ .progress {
         transform: scaleX(1);
         
-    }
+    } */
       /* input:not(:checked) ~ .price{
         
     } */
@@ -209,9 +252,7 @@ section{
             transition: all 400ms linear;
             
         }
-        &:hover > .price{
-            transform: translate(-200%, 0); 
-        }
+        
         
         & > .progress{
             transition: all 400ms linear;   
@@ -220,37 +261,35 @@ section{
         &:hover {
             & > .progress{
                 & > i{
-                    transform: rotate(1turn);
+                    /* transform: rotate(1turn); */
+                    animation: rotate 400ms 200ms;
                     
                 }
+                transform: scaleX(1); 
             }
-        }
-        &:not(:hover) {
-            & > .progress{
-                & > i{
-                    transform: rotate(0turn);
-                    
-                }
+            & > .price{
+                transform: translate(-200%, 0); 
             }
+            .azerty, .qwerty{
+                width: 250px;
+            }
+            
         }
-        &:hover > .progress{
-            transform: scaleX(1); 
-        }
+        
         .progress{
             background-color: $color-third;
             border: 1px none black;
             border-radius: 0px 10px 10px 0px;
-            width: 70px;
+            width: 15%;
             transform: scaleX(0);
             transform-origin: 100% 100%;
             i{
                 color: white;
                 position: relative;
-                left: calc(50% - 18px);
-                top: calc(50% - 18px);
-                font-size: 36px;
+                left: calc(50% - 12px);
+                top: calc(50% - 12px);
+                font-size: 25px;
                 transition: all 400ms linear;
-
             }
         }
         
@@ -262,12 +301,20 @@ section{
             .azerty{
                 margin-bottom: -10px;
                 font-weight: bold;
-                font-size: 17px;
+                font-size: 16px;
                 white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             .qwerty{
-                font-size: 14px;
+                font-size: 13px;
+                transition: all 400ms linear;
                 white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                
+
+                
             }
         }
         .price{
@@ -275,132 +322,14 @@ section{
             color: $color-four;
             font-weight: bold;
             font-size: 14px;
-            position: relative;
-            left: 70px;
+            position: absolute;
+            left: 85%;
             
         }
         
     }
     /* price placement mobile w=425 */
-        /* La note enchantée */
-            #entree_1_enchantee .price{
-                left: 65px;
-                /* left: 17%; */
-            }
-            #entree_2_enchantee .price{
-                left: 95px;
-                /* left: 24%; */
-            }
-            #entree_3_enchantee .price{
-                left: 75px;
-            }
-            #plats_1_enchantee .price{
-                left: 60px;
-            }
-            #plats_2_enchantee .price{
-                left: 110px;
-            }
-            #plats_3_enchantee .price{
-                left: 80px;
-            }
-            #desserts_1_enchantee .price{
-                left: 55px;
-            }
-            #desserts_2_enchantee {
-                .price{
-                    left: 100px;
-                }
-            }
-            #desserts_3_enchantee {
-                .price{
-                    left: 85px;
-                }
-                
-            }
-        /*  La palette du goût */
-            #entree_1_palette .price{
-                left: 100px;
-            }
-            #entree_2_palette .price{
-                left: 73px;
-            }
-            #entree_3_palette .price{
-                left: 60px;
-            }
-            #plats_1_palette .price{
-                left: 48px;
-            }
-            #plats_2_palette .price{
-                left: 60px;
-            }
-            #plats_3_palette .price{
-                left: 125px;
-            }
-            #desserts_1_palette .price{
-                left: 135px;
-            }
-            #desserts_2_palette .price{
-                left: 53px;
-            }
-            #desserts_3_palette .price{
-                left: 55px;
-            }
-        /* A la française */
-            #entree_1_french .price{
-                left: 80px;
-            }
-            #entree_2_french .price{
-                left: 73px;
-            }
-            #entree_3_french .price{
-                left: 115px;
-            }
-            #plats_1_french .price{
-                left: 60px;
-            }
-            #plats_2_french .price{
-                left: 72px;
-            }
-            #plats_3_french .price{
-                left: 67px;
-            }
-            #desserts_1_french .price{
-                left: 75px;
-            }
-            #desserts_2_french .price{
-                left: 100px;
-            }
-            #desserts_3_french .price{
-                left: 90px;
-            }
-        /* Le délice des sens */
-            #entree_1_delice .price{
-                left: 132px;
-            }
-            #entree_2_delice .price{
-                left: 72px;
-            }
-            #entree_3_delice .price{
-                left: 128px;
-            }
-            #plats_1_delice .price{
-                left: 60px;
-            }
-            #plats_2_delice .price{
-                left: 115px;
-            }
-            #plats_3_delice .price{
-                left: 114px;
-            }
-            #desserts_1_delice .price{
-                left: 110px;
-            }
-            #desserts_2_delice .price{
-                left: 142px;
-            }
-            #desserts_3_delice .price{
-                left: 154px;
-            }
+        
     /* ----------------------------------------------------------- */
     /* anime apparition */
     #e_title{
@@ -562,7 +491,8 @@ footer{
     }
 }
 
-
-/* Responsive */
-
-
+@keyframes rotate {
+    to {
+        transform: rotate(360deg)
+    }
+}
