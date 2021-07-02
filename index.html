@@ -39,26 +39,28 @@
                         <h2>
                             Fonctionnement
                         </h2>
-                        <div class="Fst">
-                            <p class="nb">1</p>
-                            <i class="fas fa-mobile-alt"></i>
-                            <p class="fct_txt" id="Fst_txt">
-                                Choisissez un restaurant
-                            </p>
-                        </div>
-                        <div class="Snd">
-                            <p class="nb">2</p>
-                            <i class="fas fa-list-ul"></i>
-                            <p class="fct_txt" id="Snd_txt">
-                                Composez votre menu
-                            </p>
-                        </div>
-                        <div class="Trd">
-                            <p class="nb">3</p>
-                            <i class="fas fa-store"></i>
-                            <p class="fct_txt" id="Trd_txt">
-                                Dégustez au restaurant
-                            </p>
+                        <div class="fct_group">
+                            <div class="Fst">
+                                <p class="nb">1</p>
+                                <i class="fas fa-mobile-alt"></i>
+                                <p class="fct_txt" id="Fst_txt">
+                                    Choisissez un restaurant
+                                </p>
+                            </div>
+                            <div class="Snd">
+                                <p class="nb">2</p>
+                                <i class="fas fa-list-ul"></i>
+                                <p class="fct_txt" id="Snd_txt">
+                                    Composez votre menu
+                                </p>
+                            </div>
+                            <div class="Trd">
+                                <p class="nb">3</p>
+                                <i class="fas fa-store"></i>
+                                <p class="fct_txt" id="Trd_txt">
+                                    Dégustez au restaurant
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,85 +68,91 @@
 
             <section class="middle" id="mimi">
                 <h2> Restaurants </h2>
-                <div class="resto_card_group">                    
-                    <a href="/HTML/la_palette_du_gout.html" class="card_link">
-                        <article id="palette" class="resto_card">
-                                <img src="/images/restaurants/palette.jpg" alt="" id="palette_img" class="resto_img">
+                <div class="resto_card_group">
+                    <div class="group_one">
+                        <a href="/HTML/la_palette_du_gout.html" class="card_link">
+                            <article id="palette" class="resto_card">
+                                    <img src="/images/restaurants/palette.jpg" alt="" id="palette_img" class="resto_img">
+                                    <span class="new_badge"> Nouveau </span>
+                                <div id="palette_info" class="resto_card_info">
+                                    <div id="palette_txt" class="resto_card_txt">
+                                        <h1> La palette du goût</h1>
+                                        <p>Ménilmontant</p> 
+                                    </div>
+                                    <input type="checkbox" id="heart_p"  />
+                                    <div class="btn-heart">
+                                        <label for="heart_p" id="heart_p-btn" class="btn_fav">
+                                            <i id="heart_p-icon-BG" class="fas fa-heart BG"></i>
+                                            <i id="heart_p-icon-noBG" class="fas fa-heart noBG"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                            </article>
+                        </a>
+    
+                        <a href="/HTML/la_note_enchantee.html" class="card_link">
+                            <article id="enchantee" class="resto_card">
+                                <img src="/images/restaurants/enchantee.jpg" alt="" id="enchantee_img" class="resto_img">
                                 <span class="new_badge"> Nouveau </span>
-                            <div id="palette_info" class="resto_card_info">
-                                <div id="palette_txt" class="resto_card_txt">
-                                    <h1> La palette du goût</h1>
-                                    <p>Ménilmontant</p> 
+                                <div id="enchantee_info" class="resto_card_info">
+                                    <div id="enchantee_txt" class="resto_card_txt">
+                                        <h1> La note enchantée</h1>
+                                        <p>Charbonne</p> 
+                                    </div>
+                                    <input type="checkbox" id="heart_n"  />
+                                    <div class="btn-heart">
+                                        <label for="heart_n" id="heart_n-btn" class="btn_fav">
+                                            <i id="heart_n-icon-BG" class="fas fa-heart BG"></i>
+                                            <i id="heart_n-icon-noBG" class="far fa-heart noBG"></i>
+                                        </label>
+                                    </div>
                                 </div>
-                                <input type="checkbox" id="heart_p"  />
-                                <div class="btn-heart">
-                                    <label for="heart_p" id="heart_p-btn" class="btn_fav">
-                                        <i id="heart_p-icon-BG" class="fas fa-heart BG"></i>
-                                        <i id="heart_p-icon-noBG" class="fas fa-heart noBG"></i>
-                                    </label>
+                            </article>
+                        </a>
+                    </div> 
+                    <div class="group_two">
+                        <a href="/HTML/a_la_francaise.html" class="card_link">
+                            <article id="french" class="resto_card">
+                                <img src="/images/restaurants/french.jpg" alt="" id="french_img" class="resto_img">
+                                <div id="french_info" class="resto_card_info">
+                                    <div id="french_txt" class="resto_card_txt">
+                                        <h1> À la française</h1>
+                                        <p>Cité Rouge</p> 
+                                    </div>
+                                    <input type="checkbox" id="heart_f"  />
+                                    <div class="btn-heart">
+                                        <label for="heart_f" id="heart_f-btn" class="btn_fav">
+                                            <i id="heart_f-icon-BG" class="fas fa-heart BG"></i>
+                                            <i id="heart_f-icon-noBG" class="far fa-heart noBG"></i>
+                                        </label>
+                                    </div> 
                                 </div>
-                            </div>
-                        </article>
-                    </a>
+                            </article>
+                        </a>
+    
+                        <a href="/HTML/le_delice_des_sens.html" class="card_link">
+                            <article id="delice" class="resto_card">
+                                <img src="/images/restaurants/delice.jpg" alt="" id="delice_img" class="resto_img">
+                                <div id="delice_info" class="resto_card_info">
+                                    <div id="delice_txt" class="resto_card_txt">
+                                        <h1> Le délice des sens</h1>
+                                        <p>Folie-Méricourt</p> 
+                                    </div>
+                                    <input type="checkbox" id="heart_d"  />
+                                    <div class="btn-heart">
+                                        <label for="heart_d" id="heart_d-btn" class="btn_fav">
+                                            <i id="heart_d-icon-BG" class="fas fa-heart BG"></i>
+                                            <i id="heart_d-icon-noBG" class="far fa-heart noBG"></i>
+                                        </label>
+                                    </div> 
+                                </div>
+    
+                            </article>
+                        </a>
+                    </div>                   
+                    
 
-                    <a href="/HTML/la_note_enchantee.html" class="card_link">
-                        <article id="enchantee" class="resto_card">
-                            <img src="/images/restaurants/enchantee.jpg" alt="" id="enchantee_img" class="resto_img">
-                            <span class="new_badge"> Nouveau </span>
-                            <div id="enchantee_info" class="resto_card_info">
-                                <div id="enchantee_txt" class="resto_card_txt">
-                                    <h1> La note enchantée</h1>
-                                    <p>Charbonne</p> 
-                                </div>
-                                <input type="checkbox" id="heart_n"  />
-                                <div class="btn-heart">
-                                    <label for="heart_n" id="heart_n-btn" class="btn_fav">
-                                        <i id="heart_n-icon-BG" class="fas fa-heart BG"></i>
-                                        <i id="heart_n-icon-noBG" class="far fa-heart noBG"></i>
-                                    </label>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
-
-                    <a href="/HTML/a_la_francaise.html" class="card_link">
-                        <article id="french" class="resto_card">
-                            <img src="/images/restaurants/french.jpg" alt="" id="french_img" class="resto_img">
-                            <div id="french_info" class="resto_card_info">
-                                <div id="french_txt" class="resto_card_txt">
-                                    <h1> À la française</h1>
-                                    <p>Cité Rouge</p> 
-                                </div>
-                                <input type="checkbox" id="heart_f"  />
-                                <div class="btn-heart">
-                                    <label for="heart_f" id="heart_f-btn" class="btn_fav">
-                                        <i id="heart_f-icon-BG" class="fas fa-heart BG"></i>
-                                        <i id="heart_f-icon-noBG" class="far fa-heart noBG"></i>
-                                    </label>
-                                </div> 
-                            </div>
-                        </article>
-                    </a>
-
-                    <a href="/HTML/le_delice_des_sens.html" class="card_link">
-                        <article id="delice" class="resto_card">
-                            <img src="/images/restaurants/delice.jpg" alt="" id="delice_img" class="resto_img">
-                            <div id="delice_info" class="resto_card_info">
-                                <div id="delice_txt" class="resto_card_txt">
-                                    <h1> Le délice des sens</h1>
-                                    <p>Folie-Méricourt</p> 
-                                </div>
-                                <input type="checkbox" id="heart_d"  />
-                                <div class="btn-heart">
-                                    <label for="heart_d" id="heart_d-btn" class="btn_fav">
-                                        <i id="heart_d-icon-BG" class="fas fa-heart BG"></i>
-                                        <i id="heart_d-icon-noBG" class="far fa-heart noBG"></i>
-                                    </label>
-                                </div> 
-                            </div>
-
-                        </article>
-                    </a>
+                    
                 </div>
             </section><!--.middle-->
 

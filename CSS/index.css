@@ -103,7 +103,7 @@ body {
           animation-delay: 1.75s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  z-index: 1;
+  z-index: 20;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,6 +159,7 @@ body {
 }
 
 .prez {
+  position: relative;
   height: 287px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,7 +185,7 @@ body {
 .prez h1 {
   margin: -5% 15% 0%;
   font-size: 25px;
-  font-weight: black;
+  font-weight: bold;
 }
 
 .prez p {
@@ -211,6 +212,8 @@ body {
 .prez div a:hover {
   -webkit-box-shadow: 1px 1px 10px #505050;
           box-shadow: 1px 1px 10px #505050;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FFABFF), to(#C588FF));
+  background: linear-gradient(to bottom right, #FFABFF, #C588FF);
 }
 
 .fct {
@@ -221,7 +224,7 @@ body {
   padding-left: 5%;
 }
 
-.fct div {
+.fct div div {
   border: 1px none black;
   border-radius: 18px;
   margin: 5% 0px 0px 5%;
@@ -241,35 +244,35 @@ body {
           box-shadow: 1px 1px 10px #e6e3e3;
 }
 
-.fct div .fas {
+.fct div div .fas {
   position: relative;
   right: 30px;
   top: 20px;
 }
 
-.fct div .fa-mobile-alt {
+.fct div div .fa-mobile-alt {
   right: 22px;
 }
 
-.fct div .fa-store {
+.fct div div .fa-store {
   right: 28px;
 }
 
-.fct div .fct_txt {
+.fct div div .fct_txt {
   font-weight: bold;
   position: relative;
   right: 10%;
 }
 
-.fct div #Snd_txt {
+.fct div div #Snd_txt {
   right: 14%;
 }
 
-.fct div #Trd_txt {
+.fct div div #Trd_txt {
   right: 13%;
 }
 
-.fct div .nb {
+.fct div div .nb {
   border: 2px solid #9356DC;
   border-radius: 50%;
   width: 20px;
@@ -434,10 +437,12 @@ body {
   opacity: 0;
   -webkit-transition: opacity 600ms linear;
   transition: opacity 600ms linear;
+  z-index: 10;
 }
 
 .resto_card_info .noBG {
   opacity: 1;
+  z-index: 5;
 }
 
 /*Footer*/
@@ -570,6 +575,113 @@ footer .resto p, footer .partner p {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+/* Responsive */
+/* Tablette */
+@media screen and (min-width: 768px) {
+  .logo_h {
+    background-size: 35%;
+  }
+  .prez h1, .prez p {
+    position: relative;
+    top: 25%;
+  }
+  .prez .button {
+    position: relative;
+    bottom: 10%;
+  }
+  .fct div .fas {
+    right: 20%;
+  }
+  .fct div #Fst_txt {
+    right: 30%;
+  }
+  .fct div #Snd_txt {
+    right: 32%;
+  }
+  .fct div #Trd_txt {
+    right: 31%;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .prez h1, .prez p {
+    position: relative;
+    top: 40%;
+  }
+  .prez .button {
+    position: relative;
+    bottom: 15%;
+  }
+  .fct .fct_group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .fct .fct_group div #Fst_txt {
+    right: 10%;
+  }
+  .middle .resto_card_group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .middle .resto_card_group .group_one, .middle .resto_card_group .group_two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .middle .resto_card_group .resto_card {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .prez h1 {
+    position: relative;
+    top: 60%;
+  }
+  .prez p {
+    position: relative;
+    bottom: 50%;
+  }
+  .prez .button {
+    position: relative;
+    bottom: 35%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .prez h1 {
+    position: absolute;
+    top: 70%;
+  }
+  .prez p {
+    position: relative;
+    top: 50%;
+  }
+  .prez .button {
+    position: relative;
+    bottom: 35%;
   }
 }
 /*# sourceMappingURL=index.css.map */

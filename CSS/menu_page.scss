@@ -1,7 +1,9 @@
 /*Colors*/
 $color-first:#9356DC;
 $color-first-alt:#F5EDFF;
+$color-first-light: #C588FF;
 $color-second: #FF79DA;
+$color-second-light: #FFABFF;
 $color-third:#99E2D0;
 $color-four: #353535;
 $color-five: #eaeaea;
@@ -170,12 +172,11 @@ input[type=checkbox]{
             left: -60px;
             top: 15px;
             opacity: 1;
+            z-index: 5;
 
         }
         #heart-icon-BG{
-            
             position: absolute ;
-            
             left: -60px;
             top: 15px;
             opacity: 0;
@@ -186,6 +187,7 @@ input[type=checkbox]{
             -webkit-text-fill-color: transparent;
             background-clip:text;
             -webkit-background-clip:text;
+            z-index: 10;
         }
     }
     
@@ -411,6 +413,7 @@ section{
         box-shadow: 1px 1px 10px rgb(200, 200, 200);
         &:hover{
             box-shadow: 1px 1px 10px rgb(80, 80, 80);
+            background: linear-gradient(to bottom right, $color-second-light, $color-first-light);
         }
     }
 }
@@ -508,3 +511,46 @@ footer{
         transform: rotate(360deg)
     }
 }
+
+/* Responsive */
+    /* Tablette */
+    @media screen and (min-width: 768px) {
+        header{
+            .bloc{
+                
+                .logo_h{
+                    background-size: 35%;
+                }
+            }
+        }
+        section{
+            input:checked{
+                & ~ .price{
+                    transform: translate(-400%, 0); 
+                }
+                & ~ .progress{
+                    transform: scaleX(1);
+                }
+                & ~ .text_menu{
+                    .azerty, .qwerty{
+                        width: 400px;
+                    }
+                    
+                }
+            }
+            article{
+                .price{
+                    
+                    left: 90%;
+                }
+                &:hover{
+                    & > .price{
+                        transform: translate(-400%, 0);
+                    }
+                    .azerty, .qwerty{
+                        width: 400px;
+                    }
+                }
+        }
+        }
+    }

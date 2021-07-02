@@ -1,7 +1,9 @@
 /*Colors*/
 $color-first:#9356DC;
+$color-first-light: #C588FF;
 $color-first-alt:#F5EDFF;
 $color-second: #FF79DA;
+$color-second-light: #FFABFF;
 $color-third:#99E2D0;
 $color-third-alt:#357E6C;
 $color-four: #353535;
@@ -91,7 +93,7 @@ body{
     animation: loader .01s;
     animation-delay: 1.75s;
     animation-fill-mode: both;
-    z-index: 1;
+    z-index: 20;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,6 +138,7 @@ body{
     
 }
 .prez{
+    position: relative;
     height: 287px;
     display: flex;
     flex-direction: column;
@@ -151,7 +154,8 @@ body{
     h1{
         margin: -5% 15% 0%;
         font-size: 25px;
-        font-weight: black;
+        font-weight: bold;
+        
     }
     p{
         
@@ -171,6 +175,7 @@ body{
         box-shadow: 1px 1px 10px rgb(200, 200, 200);
         &:hover{
             box-shadow: 1px 1px 10px rgb(80, 80, 80);
+            background: linear-gradient(to bottom right, $color-second-light, $color-first-light);
         }
     }
 }
@@ -181,7 +186,7 @@ body{
         padding-left: 5%;
     }
     
-    div{
+    div div{
         border: 1px none black;
         border-radius: 18px;
         margin: 5% 0px 0px 5%;
@@ -356,10 +361,11 @@ body{
         -webkit-background-clip:text;
         opacity: 0;
         transition: opacity 600ms linear;
+        z-index: 10;
     }
     .noBG{
         opacity: 1;
-        
+        z-index: 5;
     }
     
 }
@@ -448,3 +454,108 @@ footer{
         transform: translateY(0);
     }
 }
+
+
+/* Responsive */
+    /* Tablette */
+    @media screen and (min-width: 768px){
+        .logo_h{
+            background-size: 35%;
+        }
+        .prez{
+            h1, p{
+                position: relative;
+                top: 25%;
+            }
+            .button{
+                position: relative;
+                bottom: 10%;
+            }
+        }
+        .fct{
+            div{
+                .fas{
+                    right: 20%;
+                }
+                #Fst_txt{
+                    right: 30%;
+                }
+                #Snd_txt{
+                    right: 32%;
+                }
+                #Trd_txt{
+                    right: 31%;
+                }
+            }
+        }
+    }
+
+    /* Desktop */
+    @media screen and (min-width: 1024px) {
+        .prez{
+            h1, p{
+                position: relative;
+                top: 40%;
+            }
+            .button{
+                position: relative;
+                bottom: 15%;
+            }
+        }
+        .fct{
+            .fct_group{
+                display: flex;
+                flex-direction: row;
+                div #Fst_txt{
+                    right: 10%;
+                }
+            }
+        }
+        .middle{
+            .resto_card_group{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                .group_one, .group_two{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+                .resto_card{
+                    width: 400px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .prez{
+            h1{
+                position: relative;
+                top: 60%;
+            }
+            p{
+                position: relative;
+                bottom: 50%;
+            }
+            .button{
+                position: relative;
+                bottom: 35%;
+            }
+        }
+    }
+    @media screen and (min-width: 1700px) {
+        .prez{
+            h1{
+                position: absolute;
+                top: 70%;
+            }
+            p{
+                position: relative;
+                top: 50%;
+            }
+            .button{
+                position: relative;
+                bottom: 35%;
+            }
+        }
+    }

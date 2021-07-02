@@ -175,6 +175,7 @@ input[type=checkbox] {
   left: -60px;
   top: 15px;
   opacity: 1;
+  z-index: 5;
 }
 
 .head .btn_fav #heart-icon-BG {
@@ -191,6 +192,7 @@ input[type=checkbox] {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  z-index: 10;
 }
 
 section {
@@ -458,6 +460,8 @@ section .desserts_3 {
 .button .btn:hover {
   -webkit-box-shadow: 1px 1px 10px #505050;
           box-shadow: 1px 1px 10px #505050;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FFABFF), to(#C588FF));
+  background: linear-gradient(to bottom right, #FFABFF, #C588FF);
 }
 
 footer {
@@ -613,6 +617,35 @@ footer .resto p, footer .partner p {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+/* Tablette */
+@media screen and (min-width: 768px) {
+  header .bloc .logo_h {
+    background-size: 35%;
+  }
+  section input:checked ~ .price {
+    -webkit-transform: translate(-400%, 0);
+            transform: translate(-400%, 0);
+  }
+  section input:checked ~ .progress {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  section input:checked ~ .text_menu .azerty, section input:checked ~ .text_menu .qwerty {
+    width: 400px;
+  }
+  section article .price {
+    left: 90%;
+  }
+  section article:hover > .price {
+    -webkit-transform: translate(-400%, 0);
+            transform: translate(-400%, 0);
+  }
+  section article:hover .azerty, section article:hover .qwerty {
+    width: 400px;
   }
 }
 /*# sourceMappingURL=menu_page.css.map */

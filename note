@@ -113,3 +113,41 @@ radio btn
 
 
 body margin 8px all
+
+
+
+
+
+
+rgb 147 86  220
+    144 82  219
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Fst{
+                    #Fst_txt{
+                        right: 50%;
+                    }
+                }
+                .Snd{
+                    #Snd_txt{
+                        right: 50%;
+                    }
+                }
+                .Trd{
+                    #Trd_txt{
+                        right: 50%;
+                    }
+                }
