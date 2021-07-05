@@ -50,6 +50,7 @@
 
 body {
   font-family: 'Roboto', serif;
+  width: 100%;
 }
 
 .loader_item {
@@ -306,12 +307,93 @@ body {
   padding: 5px 10px 10px 10px;
 }
 
-.middle h2 {
+.middle .section_title {
   padding-left: 5%;
 }
 
-.middle div a {
+.middle .resto_card_group .group_two, .middle .resto_card_group .group_one {
+  position: relative;
+}
+
+.middle .resto_card_group div input[type=checkbox] {
+  display: none;
+}
+
+.middle .resto_card_group div #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon-BG, .middle .resto_card_group div #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon-BG, .middle .resto_card_group div #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon-BG, .middle .resto_card_group div #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-BG {
+  opacity: 1;
+}
+
+.middle .resto_card_group div #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon-noBG, .middle .resto_card_group div #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon-noBG, .middle .resto_card_group div #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon-noBG, .middle .resto_card_group div #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-noBG {
+  opacity: 1;
+  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.middle .resto_card_group div a {
   text-decoration: none;
+}
+
+.middle .resto_card_group div .btn-heart {
+  height: 70px;
+}
+
+.middle .resto_card_group div .fa-heart {
+  padding-bottom: 15px;
+  padding-left: 1px;
+  padding-right: 1px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.middle .resto_card_group div i {
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: black;
+  font-weight: normal;
+  font-size: 30px;
+  height: 16px;
+}
+
+.middle .resto_card_group div #heart_p-icon-BG, .middle .resto_card_group div #heart_p-icon-noBG {
+  bottom: 25.6rem;
+  right: 10%;
+}
+
+.middle .resto_card_group div #heart_n-icon-BG, .middle .resto_card_group div #heart_n-icon-noBG {
+  bottom: 5.8rem;
+  right: 10%;
+}
+
+.middle .resto_card_group div #heart_f-icon-BG, .middle .resto_card_group div #heart_f-icon-noBG {
+  bottom: 25.6rem;
+  right: 10%;
+}
+
+.middle .resto_card_group div #heart_d-icon-BG, .middle .resto_card_group div #heart_d-icon-noBG {
+  bottom: 5.8rem;
+  right: 10%;
+}
+
+.middle .resto_card_group div .BG {
+  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  -webkit-transition: opacity 600ms linear;
+  transition: opacity 600ms linear;
+  z-index: 10;
+}
+
+.middle .resto_card_group div .noBG {
+  opacity: 1;
+  z-index: 5;
 }
 
 .resto_card {
@@ -331,7 +413,6 @@ body {
   height: 250px;
   margin-left: 5.34%;
   margin-right: 5.34%;
-  margin-bottom: 25px;
   -webkit-box-shadow: 1px 1px 10px #c8c8c8;
           box-shadow: 1px 1px 10px #c8c8c8;
 }
@@ -378,7 +459,7 @@ body {
   margin-right: 10px;
 }
 
-.resto_card_info div h1 {
+.resto_card_info div h2 {
   font-size: 18px;
   color: black;
   text-decoration: none;
@@ -391,29 +472,12 @@ body {
   color: black;
 }
 
-.resto_card_info input[type=checkbox] {
-  display: none;
-}
-
 .resto_card_info .fa-heart {
   padding-bottom: 15px;
   padding-left: 1px;
   padding-right: 1px;
   cursor: pointer;
   position: absolute;
-}
-
-.resto_card_info #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon-BG, .resto_card_info #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon-BG, .resto_card_info #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon-BG, .resto_card_info #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-BG {
-  opacity: 1;
-}
-
-.resto_card_info #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon-noBG, .resto_card_info #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon-noBG, .resto_card_info #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon-noBG, .resto_card_info #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-noBG {
-  opacity: 1;
-  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to top right, #FF79DA, #9356DC);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .resto_card_info i {
@@ -454,7 +518,13 @@ footer {
 }
 
 footer .logo_f {
-  background-image: url("/images/logo/ohmyfood.png");
+  background-image: url("/images/logo/ohmyfood_white.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  background-size: 30%;
+  position: relative;
+  left: 20px;
+  top: 5px;
 }
 
 footer div p {
@@ -592,22 +662,35 @@ footer .resto p, footer .partner p {
     position: relative;
     bottom: 10%;
   }
-  .fct div .fas {
-    right: 20%;
+  .fct .fct_group .Fst .fas {
+    right: calc(25% - 5px);
   }
-  .fct div #Fst_txt {
+  .fct .fct_group .Snd .fas {
+    right: 25%;
+  }
+  .fct .fct_group .Trd .fas {
+    right: calc(25% - 3px);
+  }
+  .fct .fct_group #Fst_txt {
     right: 30%;
   }
-  .fct div #Snd_txt {
+  .fct .fct_group #Snd_txt {
     right: 32%;
   }
-  .fct div #Trd_txt {
+  .fct .fct_group #Trd_txt {
     right: 31%;
+  }
+  footer .logo_f {
+    background-size: 20%;
+    height: 30px;
   }
 }
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+  .logo_h {
+    background-size: 35%;
+  }
   .prez h1, .prez p {
     position: relative;
     top: 40%;
@@ -615,6 +698,9 @@ footer .resto p, footer .partner p {
   .prez .button {
     position: relative;
     bottom: 15%;
+  }
+  .fct {
+    margin-left: -15px;
   }
   .fct .fct_group {
     display: -webkit-box;
@@ -625,8 +711,26 @@ footer .resto p, footer .partner p {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .fct .fct_group div #Fst_txt {
+  .fct .fct_group .Fst .fas {
     right: 10%;
+  }
+  .fct .fct_group .Snd .fas {
+    right: 10%;
+  }
+  .fct .fct_group .Trd .fas {
+    right: 10%;
+  }
+  .fct .fct_group #Fst_txt {
+    right: 5%;
+  }
+  .fct .fct_group #Snd_txt {
+    right: 5%;
+  }
+  .fct .fct_group #Trd_txt {
+    right: 5%;
+  }
+  .middle {
+    width: 100%;
   }
   .middle .resto_card_group {
     display: -webkit-box;
@@ -650,12 +754,50 @@ footer .resto p, footer .partner p {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .middle .resto_card_group .resto_card {
+  .middle .resto_card_group .pale, .middle .resto_card_group .note, .middle .resto_card_group .del, .middle .resto_card_group .fr {
+    position: relative;
+  }
+  .middle .resto_card_group div div {
+    /* {
+                        bottom: 5.8rem;
+                        right: 5%;
+                        color: blue;
+                    }
+                    #heart_f-icon-BG, #heart_f-icon-noBG{
+                        bottom: 5.8rem;
+                        right: 5%;
+                        color: green;
+                    }
+                    #heart_d-icon-BG, #heart_d-icon-noBG{
+                        bottom: 5.8rem;
+                        right: 5%;
+                        color: pink;
+                    } */
+  }
+  .middle .resto_card_group div div #heart_p-icon-BG, .middle .resto_card_group div div #heart_p-icon-noBG, .middle .resto_card_group div div #heart_n-icon-BG, .middle .resto_card_group div div #heart_n-icon-noBG, .middle .resto_card_group div div #heart_f-icon-BG, .middle .resto_card_group div div #heart_f-icon-noBG, .middle .resto_card_group div div #heart_d-icon-BG, .middle .resto_card_group div div #heart_d-icon-noBG {
+    bottom: 5.8rem;
+    right: 5%;
+    color: red;
+  }
+  .middle .resto_card_group div div .resto_card {
     width: 400px;
+  }
+  footer {
+    width: 100%;
+    margin: 0px -10px -20px -10px;
+    padding: 5px 0px 5px 10px;
+  }
+  footer .logo_f {
+    background-size: 15%;
+    width: 85%;
+    height: 35px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .logo_h {
+    background-size: 25%;
+  }
   .prez h1 {
     position: relative;
     top: 60%;
@@ -668,20 +810,26 @@ footer .resto p, footer .partner p {
     position: relative;
     bottom: 35%;
   }
+  footer .logo_f {
+    background-size: 10%;
+    height: 35px;
+  }
 }
 
 @media screen and (min-width: 1700px) {
   .prez h1 {
     position: absolute;
-    top: 70%;
+    top: 65%;
+    left: 23%;
   }
   .prez p {
     position: relative;
-    top: 50%;
+    top: 60%;
+    left: 0%;
   }
   .prez .button {
     position: relative;
-    bottom: 35%;
+    bottom: 50%;
   }
 }
 /*# sourceMappingURL=index.css.map */

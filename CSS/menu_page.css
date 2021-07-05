@@ -53,6 +53,8 @@
 
 body {
   font-family: 'Roboto', serif;
+  margin: 8px;
+  padding: 0px;
 }
 
 header .bloc {
@@ -346,6 +348,7 @@ section article .text_menu .azerty {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0px;
 }
 
 section article .text_menu .qwerty {
@@ -472,7 +475,13 @@ footer {
 }
 
 footer .logo_f {
-  background-image: url("/images/logo/ohmyfood.png");
+  background-image: url("/images/logo/ohmyfood_white.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  background-size: 30%;
+  position: relative;
+  left: 20px;
+  top: 5px;
 }
 
 footer div p {
@@ -646,6 +655,92 @@ footer .resto p, footer .partner p {
   }
   section article:hover .azerty, section article:hover .qwerty {
     width: 400px;
+  }
+  footer .logo_f {
+    background-size: 20%;
+    height: 30px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  header .bloc .logo_h {
+    background-size: 25%;
+  }
+  .group_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .group_menu section {
+    width: 30%;
+  }
+  .group_menu section .tiret_vert {
+    top: 35px;
+  }
+  .group_menu section input:checked ~ .price {
+    -webkit-transform: translate(-175%, 0);
+            transform: translate(-175%, 0);
+  }
+  .group_menu section input:checked ~ .progress {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .group_menu section input:checked ~ .text_menu .azerty, .group_menu section input:checked ~ .text_menu .qwerty {
+    width: 185px;
+  }
+  .group_menu section article:hover .azerty, .group_menu section article:hover .qwerty {
+    width: 185px;
+  }
+  .group_menu section article:hover > .price {
+    -webkit-transform: translate(-195%, 0);
+            transform: translate(-195%, 0);
+  }
+  .group_menu section article:hover > .progress {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  footer .logo_f {
+    background-size: 15%;
+    height: 35px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header .bloc .logo_h {
+    background-size: 20%;
+  }
+  .group_menu section input:checked ~ .price {
+    -webkit-transform: translate(-250%, 0);
+            transform: translate(-250%, 0);
+  }
+  .group_menu section input:checked ~ .progress {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .group_menu section input:checked ~ .text_menu .azerty, .group_menu section input:checked ~ .text_menu .qwerty {
+    width: 100%;
+  }
+  .group_menu section article:hover .azerty, .group_menu section article:hover .qwerty {
+    width: 100%;
+  }
+  .group_menu section article:hover > .price {
+    -webkit-transform: translate(-250%, 0);
+            transform: translate(-250%, 0);
+  }
+  .group_menu section article:hover > .progress {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  footer .logo_f {
+    background-size: 10%;
+    height: 35px;
   }
 }
 /*# sourceMappingURL=menu_page.css.map */

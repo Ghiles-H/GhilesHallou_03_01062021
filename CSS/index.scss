@@ -49,8 +49,10 @@ $color-seven: #7e7e7e;
     font-style: italic;
 }
 
+
 body{
     font-family: 'Roboto', serif;
+    width: 100%;
     
     
 }
@@ -252,12 +254,86 @@ body{
     background-color: $color-six;
     margin: 0px -10px 0px -10px;
     padding: 5px 10px 10px 10px;
-    h2{
+    .section_title{
         padding-left: 5%;
     }
-    div a {
-        text-decoration: none;
-        
+    .resto_card_group {
+        .group_two, .group_one{
+            position: relative;
+        }
+        div{
+            input[type=checkbox]{
+                display: none;
+            }
+            #heart_p:checked ~  .btn-heart #heart_p-btn #heart_p-icon-BG, #heart_n:checked ~  .btn-heart #heart_n-btn #heart_n-icon-BG, #heart_f:checked ~  .btn-heart #heart_f-btn #heart_f-icon-BG, #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-BG{
+                opacity: 1;
+            }
+            #heart_p:checked ~  .btn-heart #heart_p-btn #heart_p-icon-noBG, #heart_n:checked ~  .btn-heart #heart_n-btn #heart_n-icon-noBG, #heart_f:checked ~  .btn-heart #heart_f-btn #heart_f-icon-noBG, #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-noBG{
+                opacity: 1;
+                background: linear-gradient(to top right, $color-second, $color-first);
+                -webkit-text-fill-color: transparent;
+                background-clip:text;
+                -webkit-background-clip:text;
+            }
+            a {
+                text-decoration: none;
+            
+            }
+            .btn-heart{
+                height: 70px;
+            }
+            .fa-heart{
+                padding-bottom: 15px;
+                padding-left: 1px;
+                padding-right: 1px;
+                cursor: pointer;
+                position: absolute;  
+            }
+            
+            
+            
+            i{
+                
+                bottom: 1.5rem;
+                right: 1.5rem;
+                color: black;
+                font-weight: normal;
+                font-size: 30px;
+                height: 16px;
+                
+            }
+            #heart_p-icon-BG, #heart_p-icon-noBG{
+                bottom: 25.6rem;
+                right: 10%;
+            }
+            #heart_n-icon-BG, #heart_n-icon-noBG{
+                bottom: 5.8rem;
+                right: 10%;
+            }
+            #heart_f-icon-BG, #heart_f-icon-noBG{
+                bottom: 25.6rem;
+                right: 10%;
+            }
+            #heart_d-icon-BG, #heart_d-icon-noBG{
+                bottom: 5.8rem;
+                right: 10%;
+            }
+            .BG{
+                background: linear-gradient(to top right, $color-second, $color-first);
+                color: rgba(0, 0, 0, 0);
+                font-weight: bold;
+                -webkit-text-fill-color: transparent;
+                background-clip:text;
+                -webkit-background-clip:text;
+                opacity: 0;
+                transition: opacity 600ms linear;
+                z-index: 10;
+            }
+            .noBG{
+                opacity: 1;
+                z-index: 5;
+            }
+        }
     }
 }
 .resto_card{
@@ -271,7 +347,7 @@ body{
     height: 250px;
     margin-left: 5.34%;
     margin-right: 5.34%;
-    margin-bottom: 25px;
+    
     box-shadow: 1px 1px 10px rgb(200, 200, 200);
     &:hover{
         box-shadow: 1px 1px 10px rgb(80, 80, 80);
@@ -305,7 +381,7 @@ body{
     justify-content: space-between;
     margin-left: 10px;
     margin-right: 10px;
-    div h1{
+    div h2{
         font-size: 18px;
         color: black;
         text-decoration: none;
@@ -319,9 +395,7 @@ body{
         color: black;
     }
     
-    input[type=checkbox]{
-        display: none;
-    }
+    
     .fa-heart{
         padding-bottom: 15px;
         padding-left: 1px;
@@ -329,16 +403,7 @@ body{
         cursor: pointer;
         position: absolute;   
     }
-    #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon-BG, #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon-BG, #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon-BG, #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-BG{
-        opacity: 1;
-    }
-    #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon-noBG, #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon-noBG, #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon-noBG, #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-noBG{
-        opacity: 1;
-        background: linear-gradient(to top right, $color-second, $color-first);
-        -webkit-text-fill-color: transparent;
-        background-clip:text;
-        -webkit-background-clip:text;
-    }
+    
     
     
     i{
@@ -383,7 +448,13 @@ footer{
     margin: 0px -10px -20px -10px;
     padding: 5px 0px 5px 10px;
     .logo_f{
-        background-image: url("/images/logo/ohmyfood.png");
+        background-image: url("/images/logo/ohmyfood_white.png");
+        background-repeat: no-repeat;
+        height: 25px;
+        background-size: 30%;
+        position: relative;
+        left: 20px;
+        top: 5px;
     }
     div p{
         font-size: 12px;
@@ -473,9 +544,15 @@ footer{
             }
         }
         .fct{
-            div{
-                .fas{
-                    right: 20%;
+            .fct_group{
+                .Fst .fas{
+                    right: calc(25% - 5px);
+                }
+                .Snd .fas{
+                    right: 25%;
+                }
+                .Trd .fas{
+                    right: calc(25% - 3px);
                 }
                 #Fst_txt{
                     right: 30%;
@@ -488,10 +565,20 @@ footer{
                 }
             }
         }
+        footer{
+            .logo_f{
+                background-size: 20%;
+                height: 30px;
+            }
+        }
     }
 
     /* Desktop */
     @media screen and (min-width: 1024px) {
+        
+        .logo_h{
+            background-size: 35%;
+        }
         .prez{
             h1, p{
                 position: relative;
@@ -503,15 +590,32 @@ footer{
             }
         }
         .fct{
+            margin-left: -15px;
             .fct_group{
                 display: flex;
                 flex-direction: row;
-                div #Fst_txt{
+                .Fst .fas{
                     right: 10%;
+                }
+                .Snd .fas{
+                    right: 10%;
+                }
+                .Trd .fas{
+                    right: 10%;
+                }
+                #Fst_txt{
+                    right: 5%;
+                }
+                #Snd_txt{
+                    right: 5%;
+                }
+                #Trd_txt{
+                    right: 5%;
                 }
             }
         }
         .middle{
+            width: 100%;
             .resto_card_group{
                 display: flex;
                 flex-direction: column;
@@ -520,14 +624,55 @@ footer{
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
+                    
                 }
-                .resto_card{
-                    width: 400px;
+                .pale, .note, .del, .fr{
+                    position: relative;
+                }
+                div div {
+                    #heart_p-icon-BG, #heart_p-icon-noBG, #heart_n-icon-BG, #heart_n-icon-noBG, #heart_f-icon-BG, #heart_f-icon-noBG, #heart_d-icon-BG, #heart_d-icon-noBG{
+                        bottom: 5.8rem;
+                        right: 5%;
+                        color: red;
+                    }
+                    /* {
+                        bottom: 5.8rem;
+                        right: 5%;
+                        color: blue;
+                    }
+                    #heart_f-icon-BG, #heart_f-icon-noBG{
+                        bottom: 5.8rem;
+                        right: 5%;
+                        color: green;
+                    }
+                    #heart_d-icon-BG, #heart_d-icon-noBG{
+                        bottom: 5.8rem;
+                        right: 5%;
+                        color: pink;
+                    } */
+                    .resto_card{
+                        width: 400px;
+                    }
                 }
             }
         }
+        footer{
+            width: 100%;
+            margin: 0px -10px -20px -10px;
+            padding: 5px 0px 5px 10px;
+            .logo_f{
+                background-size: 15%;
+                width: 85%;
+                height: 35px;
+            }
+        }
     }
+    
+    
     @media screen and (min-width: 1440px) {
+        .logo_h{
+            background-size: 25%;
+        }
         .prez{
             h1{
                 position: relative;
@@ -542,20 +687,28 @@ footer{
                 bottom: 35%;
             }
         }
+        footer{
+            .logo_f{
+                background-size: 10%;
+                height: 35px;
+            }
+        }
     }
     @media screen and (min-width: 1700px) {
         .prez{
             h1{
                 position: absolute;
-                top: 70%;
+                top: 65%;
+                left: 23%;
             }
             p{
                 position: relative;
-                top: 50%;
+                top: 60%;
+                left: 0%;
             }
             .button{
                 position: relative;
-                bottom: 35%;
+                bottom: 50%;
             }
         }
     }
