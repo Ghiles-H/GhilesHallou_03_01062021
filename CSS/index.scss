@@ -14,37 +14,37 @@ $color-seven: #7e7e7e;
 /*Font*/
 @font-face{         /*Shrikhand*/
     font-family: 'Shrikhand';
-    src: url(/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+    src: url(polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face{         /*Roboto - Regular*/
     font-family: 'Roboto';
-    src: url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
+    src: url(polices/Roboto/Roboto-Regular.ttf) format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face{         /*Roboto - Italic*/
     font-family: 'Roboto';
-    src: url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
+    src: url(polices/Roboto/Roboto-Italic.ttf) format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 @font-face{         /*Roboto - Bold*/
     font-family: 'Roboto';
-    src: url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
+    src: url(polices/Roboto/Roboto-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face{         /*Roboto - Black*/
     font-family: 'Roboto';
-    src: url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
+    src: url(polices/Roboto/Roboto-Black.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face{         /*Roboto - Italic/Bold*/
     font-family: 'Roboto';
-    src: url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+    src: url(polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
@@ -102,7 +102,7 @@ body{
 }
 /*Header*/
 .logo_h{
-    background-image: url("/images/logo/ohmyfood.png");
+    background-image: url("images/logo/ohmyfood.png");
     border: 1px none;
     height: 65px;
     background-size: 50%;
@@ -448,7 +448,7 @@ footer{
     margin: 0px -10px -20px -10px;
     padding: 5px 0px 5px 10px;
     .logo_f{
-        background-image: url("/images/logo/ohmyfood_white.png");
+        background-image: url("images/logo/ohmyfood_white.png");
         background-repeat: no-repeat;
         height: 25px;
         background-size: 30%;
