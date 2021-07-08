@@ -14,46 +14,49 @@ $color-seven: #7e7e7e;
 /*Font*/
 @font-face{         /*Shrikhand*/
     font-family: 'Shrikhand';
-    src: url(polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+    src: url(/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face{         /*Roboto - Regular*/
     font-family: 'Roboto';
-    src: url(polices/Roboto/Roboto-Regular.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face{         /*Roboto - Italic*/
     font-family: 'Roboto';
-    src: url(polices/Roboto/Roboto-Italic.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 @font-face{         /*Roboto - Bold*/
     font-family: 'Roboto';
-    src: url(polices/Roboto/Roboto-Bold.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face{         /*Roboto - Black*/
     font-family: 'Roboto';
-    src: url(polices/Roboto/Roboto-Black.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face{         /*Roboto - Italic/Bold*/
     font-family: 'Roboto';
-    src: url(polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 
-
+html{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 body{
     font-family: 'Roboto', serif;
     width: 100%;
-    
+    margin: 0;
     
 }
 .loader_item {
@@ -102,15 +105,12 @@ body{
 }
 /*Header*/
 .logo_h{
-    background-image: url("images/logo/ohmyfood.png");
+    background-image: url("/images/logo/ohmyfood.png");
     border: 1px none;
     height: 65px;
-    background-size: 50%;
+    background-size: 44%;
     background-repeat: no-repeat;
     background-position: center;
-    margin-left: -8px;
-    margin-right: -10px;
-    padding-left: 8px;
     
     
     
@@ -122,9 +122,6 @@ body{
     justify-content: center;
     border: 1px none;
     background-color: $color-five;
-    margin-left: -25px;
-    margin-right: -10px;
-    padding-left: 8px;
     
     
     .fas{
@@ -145,41 +142,41 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: -8px;
-    margin-right: -8px;
-    padding-left: 8px;
-    padding-right: 8px;
     background-color: $color-six;
     h1, p, div{
         text-align: center;
     }
     h1{
-        margin: -5% 15% 0%;
         font-size: 25px;
         font-weight: bold;
+        position: relative;
+                top: 15%;
         
     }
     p{
-        
-        margin: 5% 10% -40px;
+        position: relative;
+                top: 15%;
         font-size: 15px;
     }
-    div{
-        margin-top: 25%;
-    }
-    div a{
-        border: 1px none black;
-        border-radius: 30px;
-        padding: 15px;
-        text-decoration: none;
-        color: white;
-        background: linear-gradient(to bottom right, $color-second, $color-first);
-        box-shadow: 1px 1px 10px rgb(200, 200, 200);
-        &:hover{
-            box-shadow: 1px 1px 10px rgb(80, 80, 80);
-            background: linear-gradient(to bottom right, $color-second-light, $color-first-light);
+    .button{
+        margin-top: auto;
+        position: relative;
+                bottom: 20%;
+        a{
+            border: 1px none black;
+            border-radius: 30px;
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(to bottom right, $color-second, $color-first);
+            box-shadow: 1px 1px 10px rgb(200, 200, 200);
+            &:hover{
+                box-shadow: 1px 1px 10px rgb(80, 80, 80);
+                background: linear-gradient(to bottom right, $color-second-light, $color-first-light);
+            }
         }
     }
+    
 }
 
 .fct{
@@ -187,7 +184,57 @@ body{
     h2{
         padding-left: 5%;
     }
-    
+    .fct_group{
+        div{
+            border: 1px none black;
+            border-radius: 18px;
+            margin: 5% 0px 0px 5%;
+            padding-bottom: 1px;
+            padding-left: 10px;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: $color-six;
+            box-shadow: 1px 1px 10px rgb(230, 227, 227);
+            .fas{
+                position: relative;
+                right: 30px;
+                top: 20px;
+            }
+            .fa-mobile-alt{
+                right: 22px;
+            }
+            .fa-store{
+                right: 28px;
+            }
+            .fct_txt{
+                font-weight: bold;
+                position: relative;
+                right: 10%;
+            }
+            #Snd_txt{
+                right: 14%;
+            }
+            #Trd_txt{
+                right: 13%;
+            }
+            .nb{
+                border: 2px solid $color-first;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                font-weight: bold;
+                text-align: center;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                background-color: $color-first;
+                color: white;
+                position: relative;
+                right: 10%;
+            }
+        }
+    }
     div div{
         border: 1px none black;
         border-radius: 18px;
@@ -252,7 +299,6 @@ body{
 /*Section*/
 .middle{
     background-color: $color-six;
-    margin: 0px -10px 0px -10px;
     padding: 5px 10px 10px 10px;
     .section_title{
         padding-left: 5%;
@@ -260,21 +306,21 @@ body{
     .resto_card_group {
         .group_two, .group_one{
             position: relative;
+            
         }
         div{
             input[type=checkbox]{
                 display: none;
             }
-            #heart_p:checked ~  .btn-heart #heart_p-btn #heart_p-icon-BG, #heart_n:checked ~  .btn-heart #heart_n-btn #heart_n-icon-BG, #heart_f:checked ~  .btn-heart #heart_f-btn #heart_f-icon-BG, #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-BG{
-                opacity: 1;
-            }
-            #heart_p:checked ~  .btn-heart #heart_p-btn #heart_p-icon-noBG, #heart_n:checked ~  .btn-heart #heart_n-btn #heart_n-icon-noBG, #heart_f:checked ~  .btn-heart #heart_f-btn #heart_f-icon-noBG, #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-noBG{
-                opacity: 1;
-                background: linear-gradient(to top right, $color-second, $color-first);
-                -webkit-text-fill-color: transparent;
-                background-clip:text;
-                -webkit-background-clip:text;
-            }
+            
+                #heart_p:checked ~  .pale .btn-heart #heart_p-btn #heart_p-icon-BG, #heart_n:checked ~  .note .btn-heart #heart_n-btn #heart_n-icon-BG, #heart_f:checked ~  .fr .btn-heart #heart_f-btn #heart_f-icon-BG, #heart_d:checked ~  .del .btn-heart #heart_d-btn #heart_d-icon-BG{
+                    opacity: 1;
+                }
+                #heart_p:checked ~ .pale .btn-heart #heart_p-btn #heart_p-icon-noBG, #heart_n:checked ~  .note .btn-heart #heart_n-btn #heart_n-icon-noBG, #heart_f:checked ~  .fr .btn-heart #heart_f-btn #heart_f-icon-noBG, #heart_d:checked ~  .del .btn-heart #heart_d-btn #heart_d-icon-noBG{
+                    opacity: 0;
+                    
+                }
+            
             a {
                 text-decoration: none;
             
@@ -332,6 +378,7 @@ body{
             .noBG{
                 opacity: 1;
                 z-index: 5;
+                transition: opacity 600ms linear;
             }
         }
     }
@@ -389,7 +436,6 @@ body{
     }
 
     div p{
-        margin-top: -15px;
         font-size: 14px;
         text-decoration: none;
         color: black;
@@ -445,10 +491,9 @@ body{
 footer{
     background-color: $color-four;
     color: white;
-    margin: 0px -10px -20px -10px;
     padding: 5px 0px 5px 10px;
     .logo_f{
-        background-image: url("images/logo/ohmyfood_white.png");
+        background-image: url("/images/logo/ohmyfood_white.png");
         background-repeat: no-repeat;
         height: 25px;
         background-size: 30%;
@@ -472,9 +517,8 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        .partner, .legal, .contact{
-            margin: -15px 0px 0px 0px;
-        }
+        line-height: 0.4;
+        margin-top: 15px;
     }
     .resto, .partner{
         display: flex;
@@ -482,7 +526,7 @@ footer{
         .fas{
             font-size: 12px;
             position: relative;
-            top: 15px;
+            top: 10px;
         }
         p{
             position: relative;
@@ -534,13 +578,15 @@ footer{
             background-size: 35%;
         }
         .prez{
+
             h1, p{
                 position: relative;
-                top: 25%;
+                top: 20%;
             }
             .button{
                 position: relative;
-                bottom: 10%;
+                bottom: 20%;
+                margin-top: auto;
             }
         }
         .fct{
@@ -555,10 +601,10 @@ footer{
                     right: calc(25% - 3px);
                 }
                 #Fst_txt{
-                    right: 30%;
+                    right: 12%;
                 }
                 #Snd_txt{
-                    right: 32%;
+                    right: 92%;
                 }
                 #Trd_txt{
                     right: 31%;
@@ -577,20 +623,28 @@ footer{
     @media screen and (min-width: 1024px) {
         
         .logo_h{
-            background-size: 35%;
+            background-size: 30%;
+            background-color: white;
+            width: 100%;
+        }
+        .local{
+            width: 100%;
         }
         .prez{
+            /* width: 100%; */
+            
             h1, p{
                 position: relative;
-                top: 40%;
+                top: 20%;
             }
             .button{
                 position: relative;
-                bottom: 15%;
+                bottom: 20%;
+                margin-top: auto;
             }
         }
         .fct{
-            margin-left: -15px;
+            width: 100%;
             .fct_group{
                 display: flex;
                 flex-direction: row;
@@ -615,7 +669,8 @@ footer{
             }
         }
         .middle{
-            width: 100%;
+            width: calc(100% - 20px);
+            
             .resto_card_group{
                 display: flex;
                 flex-direction: column;
@@ -624,6 +679,7 @@ footer{
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
+                    /* right: 60px; */
                     
                 }
                 .pale, .note, .del, .fr{
@@ -633,7 +689,7 @@ footer{
                     #heart_p-icon-BG, #heart_p-icon-noBG, #heart_n-icon-BG, #heart_n-icon-noBG, #heart_f-icon-BG, #heart_f-icon-noBG, #heart_d-icon-BG, #heart_d-icon-noBG{
                         bottom: 5.8rem;
                         right: 5%;
-                        color: red;
+                        color: black;
                     }
                     /* {
                         bottom: 5.8rem;
@@ -651,14 +707,13 @@ footer{
                         color: pink;
                     } */
                     .resto_card{
-                        width: 400px;
+                        width: 450px;
                     }
                 }
             }
         }
         footer{
-            width: 100%;
-            margin: 0px -10px -20px -10px;
+            width: calc(100% - 10px);
             padding: 5px 0px 5px 10px;
             .logo_f{
                 background-size: 15%;
@@ -671,10 +726,10 @@ footer{
     
     @media screen and (min-width: 1440px) {
         .logo_h{
-            background-size: 25%;
+            background-size: 20%/* 475.75px */;
         }
         .prez{
-            h1{
+            /* h1{
                 position: relative;
                 top: 60%;
             }
@@ -685,6 +740,15 @@ footer{
             .button{
                 position: relative;
                 bottom: 35%;
+            } */
+        }
+        .middle{
+            .resto_card_group{
+                div div{
+                    .resto_card{
+                        width: 600px;
+                    }
+                }
             }
         }
         footer{
@@ -696,7 +760,7 @@ footer{
     }
     @media screen and (min-width: 1700px) {
         .prez{
-            h1{
+            /* h1{
                 position: absolute;
                 top: 65%;
                 left: 23%;
@@ -709,6 +773,9 @@ footer{
             .button{
                 position: relative;
                 bottom: 50%;
-            }
+            } */
+        }
+        .logo_h{
+            background-size: 15%;
         }
     }

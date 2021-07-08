@@ -68,8 +68,8 @@ $d_3-delay: $d_2-delay + $supp-delay;
 }
 body{
     font-family: 'Roboto', serif;
-    margin: 8px;
-    padding: 0px;
+    margin: 0;
+    
 }
 header{
     .bloc{
@@ -88,17 +88,13 @@ header{
             background-size: 50%;
             background-repeat: no-repeat;
             background-position: center;
-            margin-left: -8px;
-            margin-right: -10px;
-            padding-left: 8px;
-            padding-bottom: 10px;
+            
         }
     }
     .back_img{
         width: 100%;
         height: 300px;
-        margin: -10px;
-        padding: 10px;
+        
         position: relative;
         z-index: 1;
         
@@ -149,12 +145,11 @@ input[type=checkbox]{
 
 .middle{
     background-color: $color-six;
-    margin: -10px;
-    padding: 10px;
+    
     border: 1px none black;
     border-radius: 50px 50px 0px 0px;
     position: relative;
-    top: -25px;
+    top: -55px;
     z-index: 1;
     
 }
@@ -172,7 +167,8 @@ input[type=checkbox]{
         #heart-icon-noBG{
             position: absolute ;
             left: -60px;
-            top: 15px;
+            top: 40px;
+            bottom: -35px;
             opacity: 1;
             z-index: 5;
 
@@ -180,7 +176,8 @@ input[type=checkbox]{
         #heart-icon-BG{
             position: absolute ;
             left: -60px;
-            top: 15px;
+            top: 40px;
+            bottom: -35px;
             opacity: 0;
             transition: opacity 600ms linear;
             background: linear-gradient(to top right, $color-second, $color-first);
@@ -258,6 +255,7 @@ section{
     article{
         box-shadow: 1px 1px 10px rgb(200, 200, 200);
         background-color: white;
+        width: 90%;
         border: 1px none black;
         border-radius: 10px;
         display: flex;
@@ -421,10 +419,11 @@ section{
     }
 }
 
+/*Footer*/
+
 footer{
     background-color: $color-four;
     color: white;
-    margin: 0px -10px -20px -10px;
     padding: 5px 0px 5px 10px;
     .logo_f{
         background-image: url("/images/logo/ohmyfood_white.png");
@@ -451,9 +450,8 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        .partner, .legal, .contact{
-            margin: -15px 0px 0px 0px;
-        }
+        line-height: 0.4;
+        margin-top: 15px;
     }
     .resto, .partner{
         display: flex;
@@ -461,7 +459,7 @@ footer{
         .fas{
             font-size: 12px;
             position: relative;
-            top: 15px;
+            top: 10px;
         }
         p{
             position: relative;
@@ -602,11 +600,13 @@ footer{
                     }
                 }
                 article{
+                    width: 100%;
                     &:hover{
                         .azerty, .qwerty{
                             width: 185px;
                         }
                         & > .price{
+
                             transform: translate(-195%, 0); 
                         }
                         & > .progress{

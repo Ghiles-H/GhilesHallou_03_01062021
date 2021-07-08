@@ -3,7 +3,7 @@
 @font-face {
   /*Shrikhand*/
   font-family: 'Shrikhand';
-  src: url(polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+  src: url(/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,7 +11,7 @@
 @font-face {
   /*Roboto - Regular*/
   font-family: 'Roboto';
-  src: url(polices/Roboto/Roboto-Regular.ttf) format("truetype");
+  src: url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,7 +19,7 @@
 @font-face {
   /*Roboto - Italic*/
   font-family: 'Roboto';
-  src: url(polices/Roboto/Roboto-Italic.ttf) format("truetype");
+  src: url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
   font-weight: normal;
   font-style: italic;
 }
@@ -27,7 +27,7 @@
 @font-face {
   /*Roboto - Bold*/
   font-family: 'Roboto';
-  src: url(polices/Roboto/Roboto-Bold.ttf) format("truetype");
+  src: url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -35,7 +35,7 @@
 @font-face {
   /*Roboto - Black*/
   font-family: 'Roboto';
-  src: url(polices/Roboto/Roboto-Black.ttf) format("truetype");
+  src: url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -43,14 +43,20 @@
 @font-face {
   /*Roboto - Italic/Bold*/
   font-family: 'Roboto';
-  src: url(polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+  src: url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
   font-weight: 700;
   font-style: italic;
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Roboto', serif;
   width: 100%;
+  margin: 0;
 }
 
 .loader_item {
@@ -118,15 +124,12 @@ body {
 
 /*Header*/
 .logo_h {
-  background-image: url("images/logo/ohmyfood.png");
+  background-image: url("/images/logo/ohmyfood.png");
   border: 1px none;
   height: 65px;
-  background-size: 50%;
+  background-size: 44%;
   background-repeat: no-repeat;
   background-position: center;
-  margin-left: -8px;
-  margin-right: -10px;
-  padding-left: 8px;
 }
 
 .local {
@@ -142,9 +145,6 @@ body {
           justify-content: center;
   border: 1px none;
   background-color: #eaeaea;
-  margin-left: -25px;
-  margin-right: -10px;
-  padding-left: 8px;
 }
 
 .local .fas {
@@ -172,10 +172,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: -8px;
-  margin-right: -8px;
-  padding-left: 8px;
-  padding-right: 8px;
   background-color: #f6f6f6;
 }
 
@@ -184,21 +180,25 @@ body {
 }
 
 .prez h1 {
-  margin: -5% 15% 0%;
   font-size: 25px;
   font-weight: bold;
+  position: relative;
+  top: 15%;
 }
 
 .prez p {
-  margin: 5% 10% -40px;
+  position: relative;
+  top: 15%;
   font-size: 15px;
 }
 
-.prez div {
-  margin-top: 25%;
+.prez .button {
+  margin-top: auto;
+  position: relative;
+  bottom: 20%;
 }
 
-.prez div a {
+.prez .button a {
   border: 1px none black;
   border-radius: 30px;
   padding: 15px;
@@ -210,7 +210,7 @@ body {
           box-shadow: 1px 1px 10px #c8c8c8;
 }
 
-.prez div a:hover {
+.prez .button a:hover {
   -webkit-box-shadow: 1px 1px 10px #505050;
           box-shadow: 1px 1px 10px #505050;
   background: -webkit-gradient(linear, left top, right bottom, from(#FFABFF), to(#C588FF));
@@ -223,6 +223,70 @@ body {
 
 .fct h2 {
   padding-left: 5%;
+}
+
+.fct .fct_group div {
+  border: 1px none black;
+  border-radius: 18px;
+  margin: 5% 0px 0px 5%;
+  padding-bottom: 1px;
+  padding-left: 10px;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 1px 1px 10px #e6e3e3;
+          box-shadow: 1px 1px 10px #e6e3e3;
+}
+
+.fct .fct_group div .fas {
+  position: relative;
+  right: 30px;
+  top: 20px;
+}
+
+.fct .fct_group div .fa-mobile-alt {
+  right: 22px;
+}
+
+.fct .fct_group div .fa-store {
+  right: 28px;
+}
+
+.fct .fct_group div .fct_txt {
+  font-weight: bold;
+  position: relative;
+  right: 10%;
+}
+
+.fct .fct_group div #Snd_txt {
+  right: 14%;
+}
+
+.fct .fct_group div #Trd_txt {
+  right: 13%;
+}
+
+.fct .fct_group div .nb {
+  border: 2px solid #9356DC;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #9356DC;
+  color: white;
+  position: relative;
+  right: 10%;
 }
 
 .fct div div {
@@ -303,7 +367,6 @@ body {
 /*Section*/
 .middle {
   background-color: #f6f6f6;
-  margin: 0px -10px 0px -10px;
   padding: 5px 10px 10px 10px;
 }
 
@@ -319,17 +382,12 @@ body {
   display: none;
 }
 
-.middle .resto_card_group div #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon-BG, .middle .resto_card_group div #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon-BG, .middle .resto_card_group div #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon-BG, .middle .resto_card_group div #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-BG {
+.middle .resto_card_group div #heart_p:checked ~ .pale .btn-heart #heart_p-btn #heart_p-icon-BG, .middle .resto_card_group div #heart_n:checked ~ .note .btn-heart #heart_n-btn #heart_n-icon-BG, .middle .resto_card_group div #heart_f:checked ~ .fr .btn-heart #heart_f-btn #heart_f-icon-BG, .middle .resto_card_group div #heart_d:checked ~ .del .btn-heart #heart_d-btn #heart_d-icon-BG {
   opacity: 1;
 }
 
-.middle .resto_card_group div #heart_p:checked ~ .btn-heart #heart_p-btn #heart_p-icon-noBG, .middle .resto_card_group div #heart_n:checked ~ .btn-heart #heart_n-btn #heart_n-icon-noBG, .middle .resto_card_group div #heart_f:checked ~ .btn-heart #heart_f-btn #heart_f-icon-noBG, .middle .resto_card_group div #heart_d:checked ~ .btn-heart #heart_d-btn #heart_d-icon-noBG {
-  opacity: 1;
-  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to top right, #FF79DA, #9356DC);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+.middle .resto_card_group div #heart_p:checked ~ .pale .btn-heart #heart_p-btn #heart_p-icon-noBG, .middle .resto_card_group div #heart_n:checked ~ .note .btn-heart #heart_n-btn #heart_n-icon-noBG, .middle .resto_card_group div #heart_f:checked ~ .fr .btn-heart #heart_f-btn #heart_f-icon-noBG, .middle .resto_card_group div #heart_d:checked ~ .del .btn-heart #heart_d-btn #heart_d-icon-noBG {
+  opacity: 0;
 }
 
 .middle .resto_card_group div a {
@@ -394,6 +452,8 @@ body {
 .middle .resto_card_group div .noBG {
   opacity: 1;
   z-index: 5;
+  -webkit-transition: opacity 600ms linear;
+  transition: opacity 600ms linear;
 }
 
 .resto_card {
@@ -466,7 +526,6 @@ body {
 }
 
 .resto_card_info div p {
-  margin-top: -15px;
   font-size: 14px;
   text-decoration: none;
   color: black;
@@ -513,12 +572,11 @@ body {
 footer {
   background-color: #353535;
   color: white;
-  margin: 0px -10px -20px -10px;
   padding: 5px 0px 5px 10px;
 }
 
 footer .logo_f {
-  background-image: url("images/logo/ohmyfood_white.png");
+  background-image: url("/images/logo/ohmyfood_white.png");
   background-repeat: no-repeat;
   height: 25px;
   background-size: 30%;
@@ -551,10 +609,8 @@ footer .f_txt {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-footer .f_txt .partner, footer .f_txt .legal, footer .f_txt .contact {
-  margin: -15px 0px 0px 0px;
+  line-height: 0.4;
+  margin-top: 15px;
 }
 
 footer .resto, footer .partner {
@@ -570,7 +626,7 @@ footer .resto, footer .partner {
 footer .resto .fas, footer .partner .fas {
   font-size: 12px;
   position: relative;
-  top: 15px;
+  top: 10px;
 }
 
 footer .resto p, footer .partner p {
@@ -656,11 +712,12 @@ footer .resto p, footer .partner p {
   }
   .prez h1, .prez p {
     position: relative;
-    top: 25%;
+    top: 20%;
   }
   .prez .button {
     position: relative;
-    bottom: 10%;
+    bottom: 20%;
+    margin-top: auto;
   }
   .fct .fct_group .Fst .fas {
     right: calc(25% - 5px);
@@ -672,10 +729,10 @@ footer .resto p, footer .partner p {
     right: calc(25% - 3px);
   }
   .fct .fct_group #Fst_txt {
-    right: 30%;
+    right: 12%;
   }
   .fct .fct_group #Snd_txt {
-    right: 32%;
+    right: 92%;
   }
   .fct .fct_group #Trd_txt {
     right: 31%;
@@ -689,18 +746,27 @@ footer .resto p, footer .partner p {
 /* Desktop */
 @media screen and (min-width: 1024px) {
   .logo_h {
-    background-size: 35%;
+    background-size: 30%;
+    background-color: white;
+    width: 100%;
+  }
+  .local {
+    width: 100%;
+  }
+  .prez {
+    /* width: 100%; */
   }
   .prez h1, .prez p {
     position: relative;
-    top: 40%;
+    top: 20%;
   }
   .prez .button {
     position: relative;
-    bottom: 15%;
+    bottom: 20%;
+    margin-top: auto;
   }
   .fct {
-    margin-left: -15px;
+    width: 100%;
   }
   .fct .fct_group {
     display: -webkit-box;
@@ -730,7 +796,7 @@ footer .resto p, footer .partner p {
     right: 5%;
   }
   .middle {
-    width: 100%;
+    width: calc(100% - 20px);
   }
   .middle .resto_card_group {
     display: -webkit-box;
@@ -753,6 +819,7 @@ footer .resto p, footer .partner p {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    /* right: 60px; */
   }
   .middle .resto_card_group .pale, .middle .resto_card_group .note, .middle .resto_card_group .del, .middle .resto_card_group .fr {
     position: relative;
@@ -777,14 +844,13 @@ footer .resto p, footer .partner p {
   .middle .resto_card_group div div #heart_p-icon-BG, .middle .resto_card_group div div #heart_p-icon-noBG, .middle .resto_card_group div div #heart_n-icon-BG, .middle .resto_card_group div div #heart_n-icon-noBG, .middle .resto_card_group div div #heart_f-icon-BG, .middle .resto_card_group div div #heart_f-icon-noBG, .middle .resto_card_group div div #heart_d-icon-BG, .middle .resto_card_group div div #heart_d-icon-noBG {
     bottom: 5.8rem;
     right: 5%;
-    color: red;
+    color: black;
   }
   .middle .resto_card_group div div .resto_card {
-    width: 400px;
+    width: 450px;
   }
   footer {
-    width: 100%;
-    margin: 0px -10px -20px -10px;
+    width: calc(100% - 10px);
     padding: 5px 0px 5px 10px;
   }
   footer .logo_f {
@@ -796,19 +862,24 @@ footer .resto p, footer .partner p {
 
 @media screen and (min-width: 1440px) {
   .logo_h {
-    background-size: 25%;
+    background-size: 20%;
   }
-  .prez h1 {
-    position: relative;
-    top: 60%;
+  .prez {
+    /* h1{
+                position: relative;
+                top: 60%;
+            }
+            p{
+                position: relative;
+                bottom: 50%;
+            }
+            .button{
+                position: relative;
+                bottom: 35%;
+            } */
   }
-  .prez p {
-    position: relative;
-    bottom: 50%;
-  }
-  .prez .button {
-    position: relative;
-    bottom: 35%;
+  .middle .resto_card_group div div .resto_card {
+    width: 600px;
   }
   footer .logo_f {
     background-size: 10%;
@@ -817,19 +888,24 @@ footer .resto p, footer .partner p {
 }
 
 @media screen and (min-width: 1700px) {
-  .prez h1 {
-    position: absolute;
-    top: 65%;
-    left: 23%;
+  .prez {
+    /* h1{
+                position: absolute;
+                top: 65%;
+                left: 23%;
+            }
+            p{
+                position: relative;
+                top: 60%;
+                left: 0%;
+            }
+            .button{
+                position: relative;
+                bottom: 50%;
+            } */
   }
-  .prez p {
-    position: relative;
-    top: 60%;
-    left: 0%;
-  }
-  .prez .button {
-    position: relative;
-    bottom: 50%;
+  .logo_h {
+    background-size: 15%;
   }
 }
 /*# sourceMappingURL=index.css.map */
