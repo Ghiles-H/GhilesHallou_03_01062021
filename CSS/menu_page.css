@@ -86,19 +86,19 @@ header .back_img {
 }
 
 header #delice_bg {
-  background-image: url("/GhilesHallou_03_01062021/images/restaurants/delice.jpg");
+  background-image: url("../images/restaurants/delice.jpg");
 }
 
 header #palette_bg {
-  background-image: url("/GhilesHallou_03_01062021/images/restaurants/palette.jpg");
+  background-image: url("../images/restaurants/palette.jpg");
 }
 
 header #enchantee_bg {
-  background-image: url("/GhilesHallou_03_01062021/images/restaurants/enchantee.jpg");
+  background-image: url("../images/restaurants/enchantee.jpg");
 }
 
 header #french_bg {
-  background-image: url("/GhilesHallou_03_01062021/images/restaurants/french.jpg");
+  background-image: url("../images/restaurants/french.jpg");
 }
 
 h1 {
@@ -469,7 +469,7 @@ footer {
 }
 
 footer .logo_f {
-  background-image: url("/images/logo/ohmyfood_white.png");
+  background-image: url("../images/logo/ohmyfood_white.png");
   background-repeat: no-repeat;
   height: 25px;
   background-size: 30%;
