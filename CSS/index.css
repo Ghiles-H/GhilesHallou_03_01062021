@@ -124,7 +124,7 @@ body {
 
 /*Header*/
 .logo_h {
-  background-image: url("/images/logo/ohmyfood.png");
+  background-image: url("images/logo/ohmyfood.png");
   border: 1px none;
   height: 65px;
   background-size: 44%;
