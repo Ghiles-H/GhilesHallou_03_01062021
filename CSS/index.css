@@ -576,7 +576,7 @@ footer {
 }
 
 footer .logo_f {
-  background-image: url("/images/logo/ohmyfood_white.png");
+  background-image: url("../images/logo/ohmyfood_white.png");
   background-repeat: no-repeat;
   height: 25px;
   background-size: 30%;
