@@ -70,6 +70,7 @@ body{
     font-family: 'Roboto', serif;
     margin: 0;
     
+    
 }
 header{
     .bloc{
@@ -135,7 +136,7 @@ input[type=checkbox]{
     opacity: 1;
 }
 #heart:checked ~ .btn-heart #heart-btn #heart-icon-noBG{
-    opacity: 1;
+    opacity: 0;
     background: linear-gradient(to top right, $color-second, $color-first);
     -webkit-text-fill-color: transparent;
     background-clip:text;
@@ -165,19 +166,22 @@ input[type=checkbox]{
         font-size: 25px;
         cursor: pointer;
         #heart-icon-noBG{
-            position: absolute ;
+            position: absolute;
             left: -60px;
-            top: 40px;
-            bottom: -35px;
+            /* right: 50px; */
+            top: 20px;
+            bottom: 0px;
             opacity: 1;
             z-index: 5;
+            
 
         }
         #heart-icon-BG{
             position: absolute ;
             left: -60px;
-            top: 40px;
-            bottom: -35px;
+            
+            top: 20px;
+            bottom: 0px;
             opacity: 0;
             transition: opacity 600ms linear;
             background: linear-gradient(to top right, $color-second, $color-first);
@@ -187,6 +191,12 @@ input[type=checkbox]{
             background-clip:text;
             -webkit-background-clip:text;
             z-index: 10;
+            height: 25px;
+        }
+        @media all and (min--moz-device-pixel-ratio:0){
+            #heart-icon-noBG, #heart-icon-BG{
+                top: 40px;
+            }
         }
     }
     
