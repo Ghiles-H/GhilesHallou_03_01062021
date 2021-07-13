@@ -20,38 +20,37 @@ $color-seven: #7e7e7e;
 }
 @font-face{         /*Roboto - Regular*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Regular.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face{         /*Roboto - Italic*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Italic.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 @font-face{         /*Roboto - Bold*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Bold.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face{         /*Roboto - Black*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Black.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face{         /*Roboto - Italic/Bold*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+    src: url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 
 html{
-    overflow-y: auto;
-    overflow-x: hidden;
+    
 }
 body{
     font-family: 'Roboto', serif;
@@ -305,6 +304,7 @@ body{
     padding: 5px 10px 10px 10px;
     .section_title{
         padding-left: 5%;
+        
     }
     .resto_card_group {
         .group_two, .group_one{
@@ -372,7 +372,7 @@ body{
                 color: rgba(0, 0, 0, 0);
                 font-weight: bold;
                 -webkit-text-fill-color: transparent;
-                background-clip:text;
+                
                 -webkit-background-clip:text;
                 opacity: 0;
                 transition: opacity 600ms linear;
@@ -471,7 +471,6 @@ body{
         color: rgba(0, 0, 0, 0);
         font-weight: bold;
         -webkit-text-fill-color: transparent;
-        background-clip:text;
         -webkit-background-clip:text;
         opacity: 0;
         transition: opacity 600ms linear;
