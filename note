@@ -151,3 +151,16 @@ rgb 147 86  220
                         right: 50%;
                     }
                 }
+
+
+
+
+
+
+
+
+
+
+                Bonjour à tous, je suis actuellement sur la fin de mon P3 mais j'ai un probleme sur mes pages, lorsque je suis sur une version mobile du navigateur (Firefox ou Chrome) il y a une barre de scroll horizontale qui apparait, j'ai essayer de modifier les margin, padding, j'ai utiliser le overflow-x:hidden mais rien n'y fait.
+                Si quelqu'un veux bien m'aider, je suis preneur, voici le github et le github pages du projet.
+                Merci d'avance
