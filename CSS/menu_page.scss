@@ -80,15 +80,20 @@ body{
     overflow-y: scroll;
     
 }
+.container-grille{
+    background-color: $color-six;
+}
 header{
     .bloc{
         margin-top: -35px;
+        background-color: white;
         a{
             font-size: 25px;
             position: relative;
             top: 50px;
             left: 15px;
             color: black;
+            
         }
         .logo_h{
             background-image: url("../images/logo/ohmyfood.png");
@@ -154,7 +159,7 @@ input[type=checkbox]{
 
 .middle{
     background-color: $color-six;
-    
+    padding-bottom: 0px;
     border: 1px none black;
     border-radius: 50px 50px 0px 0px;
     position: relative;
@@ -448,7 +453,7 @@ footer{
         height: 25px;
         background-size: 30%;
         position: relative;
-        left: 20px;
+        /* left: 20px; */
         top: 5px;
     }
     div p{
@@ -646,7 +651,7 @@ footer{
         header{
             .bloc{
                 .logo_h{
-                    background-size: 20%;
+                    background-size: 15%;
                 }
             }
         }
