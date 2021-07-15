@@ -32,44 +32,52 @@ $d_3-delay: $d_2-delay + $supp-delay;
 /*Font*/
 @font-face{         /*Shrikhand*/
     font-family: 'Shrikhand';
-    src: url(/GhilesHallou_03_01062021/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+    src: url(/polices/shrikhand/Shrikhand-Regular.otf) format("truetype"),
+         url(/GhilesHallou_03_01062021/polices/shrikhand/Shrikhand-Regular.otf) format("truetype");
+    
     font-weight: normal;
     font-style: normal;
 }
 @font-face{         /*Roboto - Regular*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Regular.ttf) format("truetype");
+    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Regular.ttf) format("truetype"),
+         url(/polices/Roboto/Roboto-Regular.ttf) format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face{         /*Roboto - Italic*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Italic.ttf) format("truetype");
+    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Italic.ttf) format("truetype"),
+         url(/polices/Roboto/Roboto-Italic.ttf) format("truetype");
     font-weight: normal;
     font-style: italic;
 }
 @font-face{         /*Roboto - Bold*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Bold.ttf) format("truetype");
+    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Bold.ttf) format("truetype"),
+         url(/polices/Roboto/Roboto-Bold.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face{         /*Roboto - Black*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Black.ttf) format("truetype");
+    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-Black.ttf) format("truetype"),
+         url(/polices/Roboto/Roboto-Black.ttf) format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 @font-face{         /*Roboto - Italic/Bold*/
     font-family: 'Roboto';
-    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+    src: url(/GhilesHallou_03_01062021/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype"),
+         url(/polices/Roboto/Roboto-BoldItalic.ttf) format("truetype");
     font-weight: 700;
     font-style: italic;
 }
 body{
     font-family: 'Roboto', serif;
     margin: 0;
-    
+    overflow-x: hidden !important;
+    overflow-y: scroll;
     
 }
 header{
@@ -531,6 +539,7 @@ footer{
 /* Responsive */
     /* Tablette */
     @media screen and (min-width: 768px) {
+        
         header{
             .bloc{
                 
