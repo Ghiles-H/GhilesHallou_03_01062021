@@ -265,7 +265,7 @@ section input:checked ~ .progress {
           transform: scaleX(1);
 }
 
-section input:checked ~ .text_menu .azerty, section input:checked ~ .text_menu .qwerty {
+section input:checked ~ .text_menu .menu_title, section input:checked ~ .text_menu .menu_description {
   width: 200px;
 }
 
@@ -315,7 +315,7 @@ section article:hover > .price {
           transform: translate(-200%, 0);
 }
 
-section article:hover .azerty, section article:hover .qwerty {
+section article:hover .menu_title, section article:hover .menu_description {
   width: 200px;
 }
 
@@ -345,7 +345,7 @@ section article .text_menu {
   color: black;
 }
 
-section article .text_menu .azerty {
+section article .text_menu .menu_title {
   margin-bottom: -10px;
   font-weight: bold;
   font-size: 16px;
@@ -355,7 +355,7 @@ section article .text_menu .azerty {
   padding: 0px;
 }
 
-section article .text_menu .qwerty {
+section article .text_menu .menu_description {
   font-size: 13px;
   -webkit-transition: all 400ms linear;
   transition: all 400ms linear;
@@ -645,7 +645,7 @@ footer .resto p, footer .partner p {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  section input:checked ~ .text_menu .azerty, section input:checked ~ .text_menu .qwerty {
+  section input:checked ~ .text_menu .menu_title, section input:checked ~ .text_menu .menu_description {
     width: 400px;
   }
   section article .price {
@@ -655,7 +655,7 @@ footer .resto p, footer .partner p {
     -webkit-transform: translate(-400%, 0);
             transform: translate(-400%, 0);
   }
-  section article:hover .azerty, section article:hover .qwerty {
+  section article:hover .menu_title, section article:hover .menu_description {
     width: 400px;
   }
   footer .logo_f {
@@ -694,13 +694,13 @@ footer .resto p, footer .partner p {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  .group_menu section input:checked ~ .text_menu .azerty, .group_menu section input:checked ~ .text_menu .qwerty {
+  .group_menu section input:checked ~ .text_menu .menu_title, .group_menu section input:checked ~ .text_menu .menu_description {
     width: 185px;
   }
   .group_menu section article {
     width: 100%;
   }
-  .group_menu section article:hover .azerty, .group_menu section article:hover .qwerty {
+  .group_menu section article:hover .menu_title, .group_menu section article:hover .menu_description {
     width: 185px;
   }
   .group_menu section article:hover > .price {
@@ -729,10 +729,10 @@ footer .resto p, footer .partner p {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  .group_menu section input:checked ~ .text_menu .azerty, .group_menu section input:checked ~ .text_menu .qwerty {
+  .group_menu section input:checked ~ .text_menu .menu_title, .group_menu section input:checked ~ .text_menu .menu_description {
     width: 100%;
   }
-  .group_menu section article:hover .azerty, .group_menu section article:hover .qwerty {
+  .group_menu section article:hover .menu_title, .group_menu section article:hover .menu_description {
     width: 100%;
   }
   .group_menu section article:hover > .price {
