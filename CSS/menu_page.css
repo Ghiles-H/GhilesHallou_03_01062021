@@ -133,11 +133,6 @@ input[type=checkbox] {
 
 #heart:checked ~ .btn-heart #heart-btn #heart-icon-noBG {
   opacity: 0;
-  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to top right, #FF79DA, #9356DC);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .middle {
