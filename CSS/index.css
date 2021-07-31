@@ -62,8 +62,8 @@ body {
   border-radius: 1rem;
   -webkit-animation: jump 1s;
           animation: jump 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
   z-index: 10;
   margin-left: 10px;
 }
@@ -101,8 +101,8 @@ body {
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-animation: loader .01s;
-          animation: loader .01s;
+  -webkit-animation: loader .1s;
+          animation: loader .1s;
   -webkit-animation-delay: 1.75s;
           animation-delay: 1.75s;
   -webkit-animation-fill-mode: both;
@@ -704,6 +704,14 @@ footer .resto p, footer .partner p {
 }
 
 /* Responsive */
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .prez p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 /* Tablette */
 @media screen and (min-width: 768px) {
   .logo_h {

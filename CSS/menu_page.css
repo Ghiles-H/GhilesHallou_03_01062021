@@ -190,7 +190,7 @@ input[type=checkbox] {
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   color: rgba(0, 0, 0, 0);
   font-weight: bold;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   -webkit-background-clip: text;
   z-index: 10;
   height: 25px;

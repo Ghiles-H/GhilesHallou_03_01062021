@@ -56,9 +56,7 @@ $color-seven: #7e7e7e;
     font-style: italic;
 }
 
-html{
-    
-}
+
 body{
     font-family: 'Roboto', serif;
     width: 100%;
@@ -73,7 +71,7 @@ body{
     width: 1rem;
     border-radius: 1rem;
     animation: jump 1s;
-    animation-iteration-count: 1;
+    animation-iteration-count: 5;
     z-index: 10;
     margin-left: 10px;
     
@@ -104,7 +102,7 @@ body{
     left: 0;
     top: 0;
     background-color: hsla(0,0%,100%,.9);
-    animation: loader .01s;
+    animation: loader .1s;
     animation-delay: 1.75s;
     animation-fill-mode: both;
     z-index: 20;
@@ -584,6 +582,15 @@ footer{
 
 
 /* Responsive */
+    /* Mobile */
+    @media screen and (max-width: 767px) {
+        .prez{
+            p{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
     /* Tablette */
     @media screen and (min-width: 768px){
         .logo_h{

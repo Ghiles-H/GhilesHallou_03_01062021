@@ -194,7 +194,7 @@ input[type=checkbox]{
             background: linear-gradient(to top right, $color-second, $color-first);
             color: rgba(0, 0, 0, 0);
             font-weight: bold;
-            -webkit-text-fill-color: transparent;
+            color: transparent;
             -webkit-background-clip:text;
             z-index: 10;
             height: 25px;
@@ -491,13 +491,10 @@ footer{
 @keyframes price_in{
     0%{
         transform: translate(0%, 0);
-
-        
     }
 
     100%{
         transform: translate(-200%, 0);
-        
     }
 }
 
@@ -565,7 +562,6 @@ footer{
             }
             article{
                 .price{
-                    
                     left: 90%;
                 }
                 &:hover{
